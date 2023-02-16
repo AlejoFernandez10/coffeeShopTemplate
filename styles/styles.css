@@ -1,0 +1,751 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Varela+Round&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&family=Montserrat:wght@200&family=Varela+Round&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  transition: 0.4s;
+}
+
+.body-no-index .header .navbar-no-gradient {
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+  background-color: #fff;
+}
+
+.header {
+  width: 100%;
+}
+.header .navbar {
+  width: 100%;
+  margin: auto;
+  padding-right: 3%;
+  height: 80px;
+}
+.header .navbar .container-fluid {
+  max-width: 1300px;
+}
+
+.body-inicio {
+  height: 100vh;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url(.././assets/fondo1.jpg) center no-repeat fixed;
+  background-size: cover;
+}
+@media screen and (min-width: 992px) {
+  .body-inicio {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), url(.././assets/fondo1.jpg) center center no-repeat fixed;
+    background-size: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+.body-inicio .main-inicio {
+  height: 100vh;
+  width: 100%;
+  max-width: 1500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 992px) {
+  .body-inicio .main-inicio {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin: auto;
+  }
+}
+.body-inicio .main-inicio .main__text-button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.body-inicio .main-inicio .main__text-button-container .main__title {
+  color: #EFEBE9;
+  font-size: 50px;
+  font-family: "Fuzzy Bubbles", cursive;
+  align-self: center;
+  white-space: nowrap;
+  margin-top: 30px;
+  font-weight: 700;
+}
+@media screen and (min-width: 400px) {
+  .body-inicio .main-inicio .main__text-button-container .main__title {
+    font-size: 60px;
+  }
+}
+@media screen and (min-width: 500px) {
+  .body-inicio .main-inicio .main__text-button-container .main__title {
+    font-size: 65px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .body-inicio .main-inicio .main__text-button-container .main__title {
+    font-size: 75px;
+  }
+}
+.body-inicio .main-inicio .main__text-button-container .main__texto-principal {
+  color: #ccc;
+  font-size: 12px;
+  padding-top: 20px;
+  margin-right: 15px;
+  margin-left: 15px;
+  font-family: "Varela Round", sans-serif;
+}
+@media screen and (min-width: 400px) {
+  .body-inicio .main-inicio .main__text-button-container .main__texto-principal {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 500px) {
+  .body-inicio .main-inicio .main__text-button-container .main__texto-principal {
+    font-size: 17px;
+  }
+}
+.body-inicio .main-inicio .main__text-button-container .botones-inicio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 992px) {
+  .body-inicio .main-inicio .main__text-button-container .botones-inicio {
+    margin-left: 20px;
+  }
+}
+@media screen and (min-width: 600px) {
+  .body-inicio .main-inicio .main__text-button-container .botones-inicio {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.body-inicio .main-inicio .main__text-button-container .botones-inicio .main__button {
+  background-color: transparent;
+  font-family: "Varela Round", sans-serif;
+  font-size: 17px;
+  padding-top: 15px;
+  padding-bottom: 16px;
+  padding-right: 40px;
+  padding-left: 40px;
+  border: 2px solid #EFEBE9;
+  border-radius: 6px;
+  color: #eee;
+  margin-top: 20px;
+  align-self: center;
+  cursor: pointer;
+}
+.body-inicio .main-inicio .main__text-button-container .botones-inicio .main__button:hover {
+  border-color: #ca663b;
+  color: #ca663b;
+  font-weight: bold;
+}
+@media screen and (min-width: 400px) {
+  .body-inicio .main-inicio .main__text-button-container .botones-inicio .main__button {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 500px) {
+  .body-inicio .main-inicio .main__text-button-container .botones-inicio .main__button {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 600px) {
+  .body-inicio .main-inicio .main__text-button-container .botones-inicio .main__button {
+    margin-top: 50px;
+    margin-right: 20px;
+  }
+}
+.body-inicio .main-inicio .main__text-button-container .botones-inicio .main__button-contacto {
+  background-color: transparent;
+  font-family: "Varela Round", sans-serif;
+  font-size: 17px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-right: 55px;
+  padding-left: 55px;
+  border: 2px solid #EFEBE9;
+  border-radius: 6px;
+  color: #eee;
+  margin-top: 20px;
+  align-self: center;
+  cursor: pointer;
+}
+.body-inicio .main-inicio .main__text-button-container .botones-inicio .main__button-contacto:hover {
+  border-color: #ca663b;
+  color: #ca663b;
+  font-weight: bold;
+}
+@media screen and (min-width: 400px) {
+  .body-inicio .main-inicio .main__text-button-container .botones-inicio .main__button-contacto {
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 500px) {
+  .body-inicio .main-inicio .main__text-button-container .botones-inicio .main__button-contacto {
+    font-size: 17px;
+  }
+}
+@media screen and (min-width: 600px) {
+  .body-inicio .main-inicio .main__text-button-container .botones-inicio .main__button-contacto {
+    margin-top: 50px;
+    margin-right: 20px;
+  }
+}
+
+.main-container .productos-img {
+  height: 450px;
+  width: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url(../assets/pexels-felicia-evelyn-limena-1568639.jpg) no-repeat center center fixed;
+  border-radius: 10px;
+  background-size: cover;
+  margin-bottom: 60px;
+  animation: aparicionCrearPedidoImg 1s 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@keyframes aparicionCrearPedidoImg {
+  from {
+    transform: translateX(800px);
+  }
+}
+@media screen and (min-width: 600px) {
+  .main-container .productos-img {
+    max-width: 1200px;
+  }
+}
+@media screen and (min-width: 700px) {
+  .main-container .productos-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: center;
+  }
+}
+.main-container .productos-img .img-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+@media screen and (min-width: 700px) {
+  .main-container .productos-img .img-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+  }
+}
+.main-container .productos-img .img-items .h3 {
+  color: #EFEBE9;
+  font-size: 50px;
+  padding-top: 150px;
+  padding-bottom: 60px;
+  position: relative;
+  bottom: 50px;
+}
+.main-container .kits-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+  margin-top: 50px;
+}
+@media screen and (min-width: 600px) {
+  .main-container .kits-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 10px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .main-container .kits-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.main-container .kits-container .kit {
+  height: 30em;
+  width: 20em;
+  background-color: #EFEBE9;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-container .kits-container .kit img {
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+.main-container .kits-container .kit .descripcion {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main-container .kits-container .kit .descripcion .agregarCarritoBtn {
+  background-color: transparent;
+  font-family: "Varela Round", sans-serif;
+  font-size: 15px;
+  margin-top: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 20px;
+  padding-left: 20px;
+  border: 2px solid #ca663b;
+  color: #ca663b;
+  border-radius: 6px;
+  align-self: center;
+  cursor: pointer;
+}
+.main-container .kits-container .kit .descripcion .agregarCarritoBtn:hover {
+  background-color: #ca663b;
+  color: #EFEBE9;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.contacto-main-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+}
+.contacto-main-container .donde-encontrarnos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contacto-main-container .donde-encontrarnos h3 {
+  font-size: 30px;
+  text-decoration: underline;
+}
+.contacto-main-container .donde-encontrarnos p {
+  text-align: center;
+}
+.contacto-main-container .donde-encontrarnos iframe {
+  height: 400px;
+  width: 90%;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  border-radius: 5px;
+}
+.contacto-main-container .contacto-center-div {
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+.contacto-main-container .contacto-center-div .form-img-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.contacto-main-container .contacto-center-div .contacto-image {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+.contacto-main-container .contacto-center-div .contacto-image img {
+  width: 100%;
+  height: 40em;
+  border-radius: 10px;
+  margin-top: 50px;
+  margin-left: 10px;
+  animation: aparicionImgContacto 1s 1;
+}
+@keyframes aparicionImgContacto {
+  from {
+    transform: translateX(-1000px);
+  }
+}
+.contacto-main-container .contacto-center-div .contacto-form-container {
+  margin-top: 50px;
+  margin-left: 10px;
+  height: 40em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 50%;
+  border-radius: 7px;
+  border: 1px solid #000;
+  animation: aparicionContactoForm 1s 1;
+}
+@keyframes aparicionContactoForm {
+  from {
+    transform: translateX(800px);
+  }
+}
+.contacto-main-container .contacto-center-div .contacto-form-container h2 {
+  font-size: 29px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  color: #000;
+}
+.contacto-main-container .contacto-center-div .contacto-form-container .contacto-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contacto-main-container .contacto-center-div .contacto-form-container .contacto-form input {
+  height: 2.5em;
+  width: 20em;
+  margin: 5px;
+  border: 2px solid #000;
+}
+.contacto-main-container .contacto-center-div .contacto-form-container .contacto-form .mb-3 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contacto-main-container .contacto-center-div .contacto-form-container .contacto-form .mb-3 .form-control {
+  width: 70%;
+}
+.contacto-main-container .contacto-center-div .contacto-form-container .contacto-form .mb-3 .form-label {
+  margin-top: 15px;
+  color: #777;
+  align-self: flex-start;
+  margin-left: 15%;
+}
+.contacto-main-container .contacto-center-div .contacto-form-container .contacto-form .mb-3 textarea {
+  width: 95%;
+  margin: auto;
+}
+.contacto-main-container .contacto-center-div .contacto-form-container .contacto-form .contacto-submit {
+  margin: 15px;
+  margin-bottom: 30px;
+  padding: 10px;
+}
+.contacto-main-container .contacto-center-div .contacto-form-container .contacto-form .contacto-submit:hover {
+  background-color: #ca663b;
+  border: 1px solid #ca663b;
+  transition: 0.5s;
+}
+
+.main-container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center;
+  padding-top: 130px;
+  background-color: #fff;
+}
+.main-container .ir-al-carrito {
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 50px;
+  border: 1px solid #ca663b;
+  text-decoration: none;
+  color: #ca663b;
+}
+.main-container .ir-al-carrito:hover {
+  background-color: #ca663b;
+  color: #fff;
+  transition: 0.5s;
+}
+.main-container .crear-pedido-img {
+  height: 450px;
+  width: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url(../assets/pexels-jason-villanueva-851555.jpg) no-repeat right center;
+  border-radius: 10px;
+  animation: aparicionCrearPedidoImg 1s 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@keyframes aparicionCrearPedidoImg {
+  from {
+    transform: translateX(800px);
+  }
+}
+@media screen and (min-width: 600px) {
+  .main-container .crear-pedido-img {
+    max-width: 1200px;
+  }
+}
+@media screen and (min-width: 700px) {
+  .main-container .crear-pedido-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
+.main-container .crear-pedido-img .img-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+@media screen and (min-width: 700px) {
+  .main-container .crear-pedido-img .img-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+  }
+}
+.main-container .crear-pedido-img .img-items .h3 {
+  color: #EFEBE9;
+  font-size: 50px;
+  padding-top: 150px;
+  position: relative;
+  bottom: 50px;
+}
+.main-container .crear-pedido-img .img-items p {
+  color: #EFEBE9;
+  margin-top: 40px;
+  margin-bottom: 50px;
+  text-align: center;
+  position: relative;
+  bottom: 70px;
+}
+@media screen and (min-width: 600px) {
+  .main-container .crear-pedido-img .img-items p {
+    margin-left: 30px;
+  }
+}
+.main-container .crear-pedido-img .img-items .crear-pedido-button {
+  background-color: transparent;
+  font-family: "Varela Round", sans-serif;
+  font-size: 17px;
+  padding-top: 15px;
+  padding-bottom: 16px;
+  padding-right: 40px;
+  padding-left: 40px;
+  border: 2px solid #EFEBE9;
+  border-radius: 6px;
+  color: #eee;
+  margin-top: 20px;
+  align-self: center;
+  cursor: pointer;
+}
+.main-container .crear-pedido-img .img-items .crear-pedido-button:hover {
+  border-color: #ca663b;
+  color: #ca663b;
+  font-weight: bold;
+}
+.main-container .comoFunciona {
+  height: auto;
+  width: 90%;
+  background-color: #EFEBE9;
+  border-radius: 15px;
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr;
+  border-bottom: 5px solid #fff;
+  animation: aparicionComoFunciona 1s 1;
+}
+@keyframes aparicionComoFunciona {
+  from {
+    transform: translateX(-800px);
+  }
+}
+@media screen and (min-width: 600px) {
+  .main-container .comoFunciona {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 992px) {
+  .main-container .comoFunciona {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1200px;
+    padding: 50px;
+  }
+}
+.main-container .comoFunciona .paso {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #2b323a;
+  padding: 10px;
+  text-align: center;
+}
+.main-container .comoFunciona .paso h4 {
+  font-size: 25px;
+  margin-top: 10px;
+}
+.main-container .comoFunciona .paso p {
+  padding: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.main-container .comoFunciona .paso .numeroDePaso {
+  font-size: 50px;
+  color: #ca663b;
+  font-weight: bold;
+}
+.main-container .pedido {
+  max-width: 1200px;
+  width: 100%;
+}
+.main-container .pedido .opciones-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main-container .pedido .opciones-container .opcionTipoDeCafe {
+  text-align: left;
+}
+.main-container .pedido .opciones-container .pasosEnOpciones {
+  display: none;
+}
+@media screen and (min-width: 992px) {
+  .main-container .pedido .opciones-container .pasosEnOpciones {
+    display: inline-block;
+    width: 100%;
+    margin-left: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 290px;
+  }
+}
+.main-container .pedido .opciones-container .pasosEnOpciones .paso-opcion {
+  padding-right: 100px;
+  padding-left: 5px;
+  border-top: 1px solid #ca663b;
+  padding-bottom: 10px;
+  opacity: 0.5;
+  transition: 0.3s;
+}
+.main-container .pedido .opciones-container .pasosEnOpciones .paso-opcion h5 {
+  font-size: 30px;
+}
+.main-container .pedido .opciones-container .pasosEnOpciones .paso-opcion .numeroDePaso {
+  font-size: 25px;
+  color: #ca663b;
+  font-weight: bold;
+}
+.main-container .pedido .opciones-container .centrar-opciones {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+@media screen and (min-width: 992px) {
+  .main-container .pedido .opciones-container .centrar-opciones {
+    align-items: flex-start;
+    width: 80%;
+  }
+}
+.main-container .pedido .opciones-container .centrar-opciones .opcion {
+  display: grid;
+  position: absolute;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  text-decoration: none;
+  top: 120px;
+}
+@media screen and (min-width: 600px) {
+  .main-container .pedido .opciones-container .centrar-opciones .opcion {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 992px) {
+  .main-container .pedido .opciones-container .centrar-opciones .opcion {
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    margin: 0;
+  }
+}
+.main-container .pedido .opciones-container .centrar-opciones .opcion .eleccion {
+  height: 250px;
+  width: 230px;
+  background-color: #EFEBE9;
+  border-radius: 10px;
+  margin: auto;
+  cursor: pointer;
+  text-decoration: none;
+  color: #2b323a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main-container .pedido .opciones-container .centrar-opciones .opcion .eleccion .titulo-eleccion {
+  padding-left: 30px;
+  font-size: 23px;
+  font-weight: bolder;
+  align-self: flex-start;
+}
+.main-container .pedido .opciones-container .centrar-opciones .opcion .eleccion .parrafo-eleccion {
+  padding-left: 30px;
+  margin-right: 25px;
+  margin-top: 20px;
+  opacity: 0.9;
+  font-size: 15px;
+}
+.main-container .pedido .opciones-container .centrar-opciones .opcion .eleccion .precio {
+  padding-left: 30px;
+  margin-top: 20px;
+  justify-self: flex-end;
+  align-self: flex-start;
+}
+.main-container .pedido .opciones-container .centrar-opciones .opcion .capsula {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url("../../assets/pedidoImagenes/coffee-capsule-1833012_640.jpg") no-repeat center center;
+  background-size: cover;
+  color: #eee;
+}
+.main-container .pedido .opciones-container .centrar-opciones .opcion .filtro {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url("../../assets/pedidoImagenes/coffee-924948_640.jpg") no-repeat center center;
+  background-size: cover;
+  color: #eee;
+}
+.main-container .pedido .opciones-container .centrar-opciones .opcion .espresso {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6)), url("../../assets/pedidoImagenes/beverage-1869598_640.jpg") no-repeat center center;
+  background-size: cover;
+  color: #eee;
+}
+.main-container .pedido .opciones-container .centrar-opciones .desaparecer {
+  animation: desaparecer 0.4s 1;
+}
+@keyframes desaparecer {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
+.main-container .pedido .opciones-container .centrar-opciones .aparecer {
+  animation: aparecer 0.4s 1;
+}
+@keyframes aparecer {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}/*# sourceMappingURL=styles.css.map */

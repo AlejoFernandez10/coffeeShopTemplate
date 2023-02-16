@@ -1,0 +1,304 @@
+    .main-container{
+        height: 100vh;
+        width: 100%;
+        @include flex(column, top, center);
+        padding-top: 130px;
+        background-color: #fff;
+    
+    
+        .ir-al-carrito{
+            padding: 10px;
+            border-radius: 10px;
+            margin-top: 50px;
+            border: 1px solid $colorSecundario-400;
+            text-decoration: none;
+            color: $colorSecundario-400;
+    
+            &:hover{
+                background-color: $colorSecundario-400;
+                color: #fff;
+                transition: .5s;
+            }     
+    
+            
+        }
+    
+        .crear-pedido-img{
+            height: 450px;
+            width:100% ;
+            background:linear-gradient(to bottom, rgba(0, 0, 0, .8), rgba(0, 0, 0, .5) ), url(../assets/pexels-jason-villanueva-851555.jpg) no-repeat right center ;
+            border-radius: 10px;
+    
+            animation: aparicionCrearPedidoImg 1s 1;
+        
+                @keyframes aparicionCrearPedidoImg{
+                    from{
+                        transform: translateX(800px);
+                    }
+                }
+            
+    
+            @include tablet{
+                max-width: 1200px;
+            }
+            @include flex(column,center,center);
+            @media screen and (min-width:700px) {
+                @include flex(column,center,flex-start);
+            }
+            
+            .img-items{
+                @include flex(column,center,center);
+                width: 100%;
+    
+                @media screen and (min-width:700px) {
+                    @include flex(column,center,center);
+                    width: 60%;
+                }
+                .h3{
+                    color: $colorPrincipal-50;
+                    font-size: 50px;
+                    padding-top: 150px;
+                    position: relative;
+                    bottom: 50px;
+                }
+                p{
+                    color: $colorPrincipal-50;
+                    margin-top: 40px;
+                    margin-bottom: 50px;
+                    text-align: center;
+                    position: relative;
+                    bottom: 70px;
+                    @include tablet{
+                        margin-left: 30px;
+                    }
+                }
+                .crear-pedido-button{
+                    background-color:transparent;
+                            font-family: $fuentePrincipal;
+                            font-size: 17px;
+            
+                            @include padding (15px,16px,40px,40px);
+                            border: 2px solid $colorPrincipal-50;
+                            border-radius: 6px;
+                            color: #eee;
+                            margin-top: 20px;
+                            align-self: center;
+                            cursor: pointer;
+            
+                            &:hover{
+                                border-color: $colorSecundario-400;
+                                color: $colorSecundario-400;
+                                font-weight: bold;
+                            }
+                }
+            }
+            
+            
+        }
+    
+        .comoFunciona{
+            height: auto;
+            width: 90%;
+            background-color: $colorPrincipal-50;
+            border-radius: 15px;
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: 1fr;
+            border-bottom: 5px solid #fff;
+            
+            animation: aparicionComoFunciona 1s 1;
+        
+                @keyframes aparicionComoFunciona{
+                    from{
+                        transform: translateX(-800px);
+                    }
+                }
+    
+            @include tablet {
+                grid-template-columns: 1fr 1fr;
+            }
+    
+            @include desktop{
+                grid-template-columns: repeat(3,1fr);
+                max-width: 1200px;
+                padding: 50px;
+            }
+            
+    
+            .paso{
+                @include flex(column,center,center);
+                color: #2b323a;
+                padding: 10px;
+                text-align: center;
+    
+                h4{
+                    font-size: 25px;
+                    margin-top: 10px;
+                }
+                p{
+                    padding: 15px;
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                }
+                
+                .numeroDePaso{
+                    font-size:50px; color:#ca663b;font-weight: bold;
+                }
+            }
+        }
+    
+        .pedido{        
+            max-width: 1200px;
+            width: 100%;
+
+            .opciones-container{
+                
+                @include flex(column,center,center);
+
+                
+                .opcionTipoDeCafe{
+                    text-align: left;                    
+                }
+    
+                .pasosEnOpciones{
+                    display: none;
+                    @include desktop{
+                        display: inline-block;
+                        width: 100%;
+                        margin-left: 2%;
+                        
+                        @include flex(row,center,center);
+                        height: 290px;
+                    }
+                    
+                    .paso-opcion{
+                        padding-right: 100px;
+                        padding-left: 5px;
+                        border-top: 1px solid #ca663b;
+                        padding-bottom: 10px;
+                        opacity: .5;
+                        transition: .3s;
+
+                        h5{
+                            font-size: 30px;
+                        }
+                        .numeroDePaso{
+                            font-size:25px; color:#ca663b;font-weight: bold;
+    
+                        }
+                    }
+                }
+    
+                .centrar-opciones{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    position: relative;
+    
+                    @include desktop{
+                        align-items: flex-start;
+                        width: 80%;
+                    }
+    
+                    .opcion{
+                        display: grid;
+                        position: absolute;
+                        grid-template-columns: 1fr;
+                        gap: 10px;                   
+                        text-decoration: none;
+                        top: 120px;
+        
+                        @include tablet{
+                            grid-template-columns: 1fr 1fr;                    
+                        }
+                        @include desktop{
+                            grid-template-columns: repeat(3,1fr);
+                            width: 100%;
+                            margin: 0;
+                        }
+                        
+                        
+        
+                        .eleccion{
+                            height: 250px;
+                            width: 230px;
+                            background-color: $colorPrincipal-50;
+                            border-radius: 10px;
+                            margin: auto;
+                            cursor: pointer;
+                            text-decoration: none;
+                            color: #2b323a;
+                            @include flex(column,center,center);
+        
+                            .titulo-eleccion{
+                                
+                                padding-left: 30px;
+                                font-size: 23px;
+                                font-weight: bolder;
+                                align-self: flex-start;
+                            }
+                            .parrafo-eleccion{
+                                padding-left: 30px;
+                                margin-right: 25px;
+                                margin-top: 20px;
+                                opacity: .9;
+                                font-size: 15px;
+                            }
+                            .precio{
+                                padding-left: 30px;
+                                margin-top: 20px;
+                                justify-self: flex-end;
+                                align-self: flex-start;                                
+                            }
+                        }
+                        .capsula{
+                            background: linear-gradient(to bottom, rgba(0, 0, 0, .8), rgba(0, 0, 0, .5) ), url("../../assets/pedidoImagenes/coffee-capsule-1833012_640.jpg") no-repeat center center ;
+                            background-size: cover;
+                            color: #eee;
+                        }
+                        .filtro{
+                            background: linear-gradient(to bottom, rgba(0, 0, 0, .8), rgba(0, 0, 0, .5) ), url("../../assets/pedidoImagenes/coffee-924948_640.jpg") no-repeat center center ;
+                            background-size: cover;
+                            color: #eee;
+                        }
+                        .espresso{
+                            background: linear-gradient(to bottom, rgba(0, 0, 0, .9), rgba(0, 0, 0, .6) ), url("../../assets/pedidoImagenes/beverage-1869598_640.jpg") no-repeat center center ;
+                            background-size: cover;
+                            color: #eee;
+                        }
+                        
+                        
+                    }
+                    .desaparecer {
+
+                        animation: desaparecer .4s 1;
+
+                        @keyframes desaparecer {
+                            0%{
+                                opacity: 100%;
+                            }
+                            100%{
+                                opacity: 0%;
+                            }
+                        }
+                    }
+                    .aparecer{
+                        animation: aparecer .4s 1;
+
+                        @keyframes aparecer {
+                            0%{
+                                opacity: 0%;
+                            }
+                            100%{
+                                opacity: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+                }
+                
+    }
+
+
