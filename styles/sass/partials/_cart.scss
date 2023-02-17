@@ -1,0 +1,120 @@
+.cart-mainContainer{
+    min-height: 100vh;
+    width: 100%;
+
+    /* @include flex(column,center,center); */
+
+    #resumenPedido{
+        max-width: 70%;
+        height: auto;
+        
+        margin: auto;
+        border-radius: 15px;
+        margin-top: 3%;
+        gap: 20px;
+        @include flex(row, space-between,center);
+        display: none;
+
+        .pedido-info{
+            height: 100%;
+            width: 65%;
+            border: 1px solid #111;
+            border-radius: 10px;
+            padding-top: 40px;
+            position: relative;
+
+            #vaciarCarrito{
+                position: absolute;
+                top: 10px;
+                right: 10px;
+            }
+            
+            .categorias{
+                display: grid;
+                grid-template-rows: repeat(4,1fr);
+                place-items: center;
+                
+                
+                .info-categorias{
+                    width: 100%;
+                    padding: 80px;
+                    padding-bottom: 10px;
+                    padding-top: 30px;
+                    font-size: 22px;
+                    font-weight: 700;
+                    @include flex(row,space-between,center);
+                }
+            }
+            
+
+            .tipoDeGrano{
+
+                .pedidoImg{
+                    height: 100px;
+                }
+            }
+            .info{
+                width: 100%;
+                padding: 30px;
+                @include flex(row,space-between,center);
+
+                span{
+                    font-size: 18px;
+                }
+            }
+        }
+
+        .resumenPago{
+            text-align: center;
+            border:1px solid #000;
+            height: auto;
+            width: 35%;
+            align-self: flex-start;
+            border-radius: 10px;
+
+            .total-precios{
+
+                .valor{
+                    width: 90%;
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 10px;
+                    margin: auto;
+                }
+
+                .subtotal{
+                    margin-top: 40px;
+                    padding-bottom: 0;
+                    
+                }
+                .total{
+
+                    border-top: 1px solid #000;
+                    font-size: 20px;                    
+                    margin-top: 30px;
+                    font-weight: 600;
+                }
+                
+            }
+
+            .finalizarCompra-btn{
+                background-color: transparent;
+                border: 2px solid #ca663b;
+                border-radius: 14px;
+                padding-left:15px ;
+                padding-right: 15px;
+                padding-top: 8px;
+                padding-bottom: 8px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+
+                &:hover{
+                    background-color: #ca663b;
+                    color: #fff;
+                    transform: scale(1.1);
+                }
+            }
+        }
+        
+    }
+}

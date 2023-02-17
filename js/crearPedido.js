@@ -55,9 +55,60 @@ opcion3.addEventListener(`click`,()=>{
     paso3.style.opacity = "1"
 
     setTimeout(()=>{
-        
+
+
     opcion3.style.display = "none"        
     opcion4.style.display = "flex"
     opcion4.classList.add(`aparecer`)    
     }, 400)
 })
+
+opcion4.addEventListener(`click`,()=>{
+
+    const addCartBtn = document.getElementById(`añadir-Carrito-Btn`);
+
+    setTimeout(()=>{
+     
+    addCartBtn.style.display = "inline",
+    addCartBtn.classList.add(`aparecer`);
+    
+    }, 400)
+})
+
+
+
+//Otengo los valores de las elecciones clickeadas
+
+const elecciones = document.querySelectorAll(`.eleccion`);
+
+
+
+const resumenPedido = [];
+
+
+elecciones.forEach(eleccion =>{
+       
+     
+    eleccion.addEventListener(`click`, ()=>{
+
+        
+        resumenPedido.push(eleccion.children[0].innerHTML)        
+
+    })
+})
+
+
+
+//ENVIO PEDIDO AL SESSION STORAGE
+
+const añadirCarritoBtn = document.getElementById(`añadir-Carrito-Btn`)
+
+añadirCarritoBtn.addEventListener(`click`, ()=>{
+    sessionStorage.setItem(`pedidoGrano`, resumenPedido[0]);
+    sessionStorage.setItem(`pedidoCafe`, resumenPedido[1]);
+    sessionStorage.setItem(`pedidoCantidad`, resumenPedido[2]);
+    sessionStorage.setItem(`pedidoFrecuencia`, resumenPedido[3]);
+})
+
+
+

@@ -195,10 +195,32 @@
                     flex-direction: column;
                     align-items: center;
                     position: relative;
-    
+
+                    .añadirCarritoBtn{
+                        display: none;
+                        background-color: transparent;
+                        color: #ca663b;
+                        position: absolute;
+                        border-radius: 10px;
+                        border: 1px solid #ca663b;
+                        padding: 12px;
+                        align-self: center;
+                        margin-top: 470px;
+
+                        &:hover{
+                            transform: scale(1.1);
+                            background-color: #ca663b;
+                            color: #fff;
+                        }
+
+                    }
+                    
+
+
                     @include desktop{
                         align-items: flex-start;
                         width: 80%;
+                        
                     }
     
                     .opcion{
@@ -221,8 +243,8 @@
                         
         
                         .eleccion{
-                            height: 250px;
-                            width: 230px;
+                            height: 270px;
+                            width: 250px;
                             background-color: $colorPrincipal-50;
                             border-radius: 10px;
                             margin: auto;
