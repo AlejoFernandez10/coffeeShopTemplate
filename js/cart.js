@@ -27,13 +27,14 @@ precioTotal.innerHTML = 1200 + 4000 + 1000 + 500;
 
 const resumenPedido = document.getElementById(`resumenPedido`)
 
-const carritoVacioMSG = document.getElementById(`carritoVacio`);
+const carritoVacioMSG = document.getElementById(`carritoVacioMSG`);
 const vaciarCarritoBtn = document.getElementById(`vaciarCarrito`);
 
 
 
 if(sessionStorage.getItem(`pedidoGrano`) !=  null ){
-    resumenPedido.style.display = "flex"
+    resumenPedido.style.display = "inline-block";
+    carritoVacioMSG.style.display = "none";
 }
 else{
     resumenPedido.style.display = "none"
@@ -45,7 +46,20 @@ vaciarCarritoBtn.addEventListener(`click`,()=>{
 
     sessionStorage.clear();   
     resumenPedido.style.display = "none"; 
-    carritoVacioMSG.style.display = "inline";
+    carritoVacioMSG.style.display = "flex";
 
     
+})
+
+
+const finalizarCompraBtn = document.getElementById(`finalizarCompraBtn`)
+
+
+finalizarCompraBtn.addEventListener(`click`, ()=>{
+    Swal.fire({
+        icon: 'success',
+        title: 'Compra realizada!',
+        text: 'Su compra fue realizada correctamente',
+        confirmButtonText: `<a id="añadir-Carrito-Btn" style=" text-decoration:none;background-color:transparent;border:none;color:#fff;">Ok!</a>`
+      })
 })

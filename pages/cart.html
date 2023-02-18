@@ -52,7 +52,7 @@
       </header>
 
 
-      <main class="cart-mainContainer">
+      <!-- <main class="cart-mainContainer">
 
             <h3 style="margin-top:150px;width: 50%; text-align: center;font-size: 35px;">Resumen Del <span style=" color: #ca663b;">pedido</span></h3>
             <div id="carritoVacio" style="display: inline;">El carrito esta vacio...</div> 
@@ -68,36 +68,36 @@
 
                         <div class=" info-categorias tipoDeGrano">
                             <span >Grano: </span>
-                            <span id="granoSeleccionado" style="font-weight: 300; text-align: center;font-size:18px;text-align:center; "></span>
-                            <span class="precioProducto" style="font-weight: 400;">$1200</span>
+                            <span id="granoSeleccionado" style="font-weight: 300; text-align: center;"> </span>
+                            <span class="precioProducto" style="font-weight: 400;"> $1200</span>
                         </div>
 
                         <div class="info-categorias tipoDeCafe-container">
                             <span>Café: </span>
-                            <span id="cafeSeleccionado" style="font-weight: 300; text-align: center;font-size:18px;text-align:center; "></span>
-                            <span class="precioProducto" style="font-weight: 400;">$4000</span>
+                            <span id="cafeSeleccionado" style="font-weight: 300; text-align: center;"> </span>
+                            <span class="precioProducto" style="font-weight: 400;"> $4000</span>
                         </div>
 
                         <div class="info-categorias cantidad-container">
                             <span>Cantidad: </span>
-                            <span id="cantidadSeleccionada" style="font-weight: 300; text-align: center;font-size:18px;text-align:center; "></span>
-                            <span class="precioProducto" style="font-weight: 400;">$1000</span>
+                            <span id="cantidadSeleccionada" > </span>
+                            <span class="precioProducto" > $1000</span>
                         </div>
 
                         <div class="info-categorias frecuencia-container" >
                             <span>Frecuencia: </span>
-                            <span id="frecuenciaSeleccionada" style="font-weight: 300; text-align: center;font-size:18px;text-align:center; "></span>
-                            <span class="precioProducto" style="font-weight: 400;">$500</span>
+                            <span id="frecuenciaSeleccionada" ></span>
+                            <span class="precioProducto" >$500</span>
                         </div>
 
-                        <div class="precioSuma info-categorias" style="border-top: 1px solid #ca663b;margin-top: 40px;">
-                            <span style="color: transparent;">Total:</span>
-                            <span>Total: </span>
-                            <span>$ <span id="precioTotal" ></span></span>
-                        </div>
+                        
                     </div>
                     
-                    
+                    <div class="precioSuma " style="border-top: 1px solid #ca663b;margin-top: 40px;margin-bottom: 20px;text-align: end;">
+                      <span style="color: transparent;">Total:</span>
+                      <span>Total: </span>
+                      <span>$ <span id="precioTotal""></span></span>
+                  </div>
 
                 </div>
                 
@@ -105,18 +105,237 @@
                 <div class="resumenPago">
                     <h5 style="font-size: 27px;padding-top: 10px;">Total del <span style="color: #ca663b;"> Carrito</span></h5>
                     <div class="total-precios">
-                        <div class="subtotal valor"><span>Subtotal</span> <span>$</span> </div>
+                        <div class="subtotal valor"><span>Subtotal</span> <span>$ 6700</span> </div>
                         <div class="envio valor"><span>Envío</span> <span style="color: #aaa;">Se calcula al finalizar compra</span> </div>
-                        <div class="total valor"><span>Total</span> <span>$</span> </div>
+                        <div class="total valor"><span>Total</span> <span>$ 6700</span> </div>
 
                     </div>
-                    <button class="finalizarCompra-btn">Finalizar compra</button>
+                    <button class="finalizarCompra-btn" id="finalizarCompraBtn">Finalizar compra</button>
                 </div>
                 
                 
             </div>
 
-      </main>
+      </main> -->
+
+
+
+      <section class="h-100 h-custom"  style="background-color: #EFEBE9;margin-top: 100px;">
+        <div class="container py-5 h-100 w-75">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12" >
+              <div class="card card-registration card-registration-2"  style="border-radius: 15px;">
+                <div class="card-body p-0" >
+                  <div class="row g-0" >
+                    <div class="col-lg-8" >
+                      <div id="carritoVacioMSG"  style="display: flex; flex-direction: column ;justify-content: center;align-items: center ;font-size:30px  ;text-align: center;margin-top: 40%;"><span>El carrito esta vacío...</span><a href="./crear-pedido.html" style=" text-decoration: none;color: #fff;font-size: 16px; padding: 8px;border-radius: 10px;background:#ca663b;margin-top: 30px;">Agregar Productos</a></div>
+                      <div class="p-5" id="resumenPedido">
+                        
+                        <div class="d-flex justify-content-between align-items-center mb-5">
+                          <h1 class="fw-bold mb-0 text-black">Pedido </h1>
+                          <h6 class="mb-0 text-muted">4 items</h6>
+                        </div>
+                        <hr class="my-4">
+      
+                        <div class="row mb-4 d-flex justify-content-between align-items-center">
+                          <div class="col-md-2 col-lg-2 col-xl-2">
+                            <img
+                              src="../assets/pedidoImagenes/beverage-1869598_640.jpg"
+                              class="img-fluid rounded-2 h-100" alt="#">
+                          </div>
+                          <div class="col-md-3 col-lg-3 col-xl-3">
+                            <h6 class="text-muted">Grano</h6>
+                            <h6 class="text-black mb-0" id="granoSeleccionado"></h6>
+                          </div>
+                          <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
+                            <button class="btn btn-link px-2"
+                              onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                              <i class="fas fa-minus"></i>
+                            </button>
+      
+                            <input id="form1" min="0" name="quantity" value="1" type="number"
+                              class="form-control form-control-sm" />
+      
+                            <button class="btn btn-link px-2"
+                              onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                              <i class="fas fa-plus"></i>
+                            </button>
+                          </div>
+                          <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
+                            <h6 class="mb-0">$ 1500</h6>
+                          </div>
+                          <div class="col-md-1 col-lg-1 col-xl-1 text-end">
+                            <a href="#!" class="text-muted"><i class="fas fa-times"></i></a>
+                          </div>
+                        </div>
+      
+                        <hr class="my-4">
+      
+                        <div class="row mb-4 d-flex justify-content-between align-items-center">
+                          <div class="col-md-2 col-lg-2 col-xl-2">
+                            
+                          </div>
+                          <div class="col-md-3 col-lg-3 col-xl-3">
+                            <h6 class="text-muted">Cafe</h6>
+                            <h6 class="text-black mb-0" id="cafeSeleccionado"></h6>
+                          </div>
+                          <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
+                            <button class="btn btn-link px-2"
+                              onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                              <i class="fas fa-minus"></i>
+                            </button>
+      
+                            <input id="form1" min="0" name="quantity" value="1" type="number"
+                              class="form-control form-control-sm" />
+      
+                            <button class="btn btn-link px-2"
+                              onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                              <i class="fas fa-plus"></i>
+                            </button>
+                          </div>
+                          <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
+                            <h6 class="mb-0">$ 500.00</h6>
+                          </div>
+                          <div class="col-md-1 col-lg-1 col-xl-1 text-end">
+                            <a href="#!" class="text-muted"><i class="fas fa-times"></i></a>
+                          </div>
+                        </div>
+      
+                        <hr class="my-4">
+      
+                        <div class="row mb-4 d-flex justify-content-between align-items-center">
+                          <div class="col-md-2 col-lg-2 col-xl-2">
+                            
+                          </div>
+                          <div class="col-md-3 col-lg-3 col-xl-3">
+                            <h6 class="text-muted">Cantidad</h6>
+                            <h6 class="text-black mb-0" id="cantidadSeleccionada"></h6>
+                          </div>
+                          <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
+                            <button class="btn btn-link px-2"
+                              onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                              <i class="fas fa-minus"></i>
+                            </button>
+      
+                            <input id="form1" min="0" name="quantity" value="1" type="number"
+                              class="form-control form-control-sm" />
+      
+                            <button class="btn btn-link px-2"
+                              onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                              <i class="fas fa-plus"></i>
+                            </button>
+                          </div>
+                          <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
+                            <h6 class="mb-0">$1200.00</h6>
+                          </div>
+                          <div class="col-md-1 col-lg-1 col-xl-1 text-end">
+                            <a href="#!" class="text-muted"><i class="fas fa-times"></i></a>
+                          </div>
+                        </div>
+
+
+                        <hr class="my-4">
+
+
+                        <div class="row mb-4 d-flex justify-content-between align-items-center">
+                          <div class="col-md-2 col-lg-2 col-xl-2">
+                            
+                          </div>
+                          <div class="col-md-3 col-lg-3 col-xl-3">
+                            <h6 class="text-muted">Frecuencia:</h6>
+                            <h6 class="text-black mb-0" id="frecuenciaSeleccionada"></h6>
+                          </div>
+                          <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
+                            <button class="btn btn-link px-2"
+                              onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                              <i class="fas fa-minus"></i>
+                            </button>
+      
+                            <input id="form1" min="0" name="quantity" value="1" type="number"
+                              class="form-control form-control-sm" />
+      
+                            <button class="btn btn-link px-2"
+                              onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                              <i class="fas fa-plus"></i>
+                            </button>
+                          </div>
+                          <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
+                            <h6 class="mb-0">$ 1200</h6>
+                          </div>
+
+                          
+                          <div class="col-md-1 col-lg-1 col-xl-1 text-end">
+                            <a href="#!" class="text-muted"><i class="fas fa-times"></i></a>
+                          </div>
+                        </div>
+
+                        
+      
+                        <hr class="my-4">
+                        
+                        <div style="display: flex;justify-content: space-between;">
+                          <div class="pt-4">
+                            <h6 class="mb-1"><a href="./crear-pedido.html" class="text-body"><i
+                                  class="fas fa-long-arrow-alt-left me-2"></i>Cambiar pedido</a></h6>
+                          </div>
+                          <div class="pt-4">
+                            <h6  style="color: #f00;"><a href="#" id="vaciarCarrito"  style="color: #f00;">Vaciar carrito</a></h6>
+                          </div>
+                        </div>
+                        
+                      </div>
+                    </div>
+
+                    <div class="col-lg-4 bg-light" >
+                      <div class="p-5">
+                        <h3 class="fw-bold mb-5 mt-2 pt-1">Resumen</h3>
+                        <hr class="my-4">
+      
+                        <div class="d-flex justify-content-between mb-4">
+                          <h5 class="text-uppercase">items 3</h5>
+                          
+                        </div>
+      
+                        <h5 class="text-uppercase mb-3">Envío</h5>
+      
+                        <div class="mb-4 pb-2">
+                          <select class="select">
+                            <option value="500">Delivery Estándar - $500.00</option>
+                            <option value="1000">Delivery Turbo - $1000</option>
+                            
+                          </select>
+                        </div>
+      
+                        <h5 class=" mb-3">Código de descuento</h5>
+      
+                        <div class="mb-5">
+                          <div class="form-outline">
+                            <input type="text" id="form3Examplea2" class="form-control form-control-lg" />
+                            <label class="form-label" for="form3Examplea2">Ingresá tu código</label>
+                          </div>
+                        </div>
+      
+                        <hr class="my-4">
+      
+                        <div class="d-flex justify-content-between mb-5">
+                          <h5 class="text-uppercase">Precio total</h5>
+                          <h5>$ <span id="precioTotal"></span></h5>
+                        </div>
+      
+                        <a   class="btn btn-light btn-block btn-lg" id="finalizarCompraBtn"
+                          style="background-color:#ca663b; color: #fff; padding: 10px;padding-left: 20px;padding-right: 20px;">Pagar</a>
+                        
+                          
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
 
 
       <footer class="footer-container"></footer>
