@@ -28,13 +28,20 @@ precioTotal.innerHTML = 1200 + 4000 + 1000 + 500;
 const resumenPedido = document.getElementById(`resumenPedido`)
 
 const carritoVacioMSG = document.getElementById(`carritoVacioMSG`);
-const vaciarCarritoBtn = document.getElementById(`vaciarCarrito`);
+const vaciarCarritoBtn = document.getElementById(`vaciarCarritoBtn`);
 
+const cargandoProdcutos = document.getElementById(`cargandoProductos`)
 
 
 if(sessionStorage.getItem(`pedidoGrano`) !=  null ){
-    resumenPedido.style.display = "inline-block";
+    resumenPedido.style.display ="none"
     carritoVacioMSG.style.display = "none";
+    cargandoProdcutos.style.display = "flex";
+
+    setTimeout(()=>{
+        cargandoProdcutos.style.display = "none"
+        resumenPedido.style.display = "inline-block";
+    },1000)
 }
 else{
     resumenPedido.style.display = "none"
@@ -42,14 +49,14 @@ else{
 
 
 
-vaciarCarritoBtn.addEventListener(`click`,()=>{
 
+vaciarCarritoBtn.addEventListener(`click`,()=>{
     sessionStorage.clear();   
     resumenPedido.style.display = "none"; 
     carritoVacioMSG.style.display = "flex";
-
     
 })
+
 
 
 const finalizarCompraBtn = document.getElementById(`finalizarCompraBtn`)
