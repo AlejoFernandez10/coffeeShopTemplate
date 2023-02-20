@@ -33,7 +33,44 @@ const vaciarCarritoBtn = document.getElementById(`vaciarCarritoBtn`);
 const cargandoProdcutos = document.getElementById(`cargandoProductos`)
 
 
+
+
+/* // KITS SECTION
+
+
+const cafekit = document.getElementById(`productos-kit`)
+const infoKit = document.getElementById(`info-kit`)
+
+if(sessionStorage.getItem(`kit-añanido`) ){
+
+    carritoVacioMSG.style.display = "none";
+    cargandoProdcutos.style.display= "inline"
+    infoKit.innerHTML = sessionStorage.getItem(`kit-añanido`);
+    
+    resumenPedido.style.display = "inline-block";
+
+
+    productoPersonalizado.forEach(producto =>{
+
+        producto.style.display ="none";
+    })
+    
+ 
+    cafekit.style.display = "inline";
+
+    
+
+
+}  */
+
+
+
+
+
 if(sessionStorage.getItem(`pedidoGrano`) !=  null ){
+
+    
+
     resumenPedido.style.display ="none"
     carritoVacioMSG.style.display = "none";
     cargandoProdcutos.style.display = "flex";
@@ -70,3 +107,6 @@ finalizarCompraBtn.addEventListener(`click`, ()=>{
         confirmButtonText: `<a id="añadir-Carrito-Btn" style=" text-decoration:none;background-color:transparent;border:none;color:#fff;">Ok!</a>`
       })
 })
+
+
+
