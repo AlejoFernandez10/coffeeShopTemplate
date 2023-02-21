@@ -189,6 +189,7 @@ const sumarAlCarrito = ()=>{
 const vaciarCarritoBtn = document.getElementById(`vaciarCarritoBtn`)
 
 vaciarCarritoBtn.addEventListener(`click`,()=>{
+  carritoCounter.innerHTML = 0
   productosCarrito.innerHTML = " ";
   
   Swal.fire({
@@ -202,11 +203,12 @@ vaciarCarritoBtn.addEventListener(`click`,()=>{
 
 const productosImg = document.getElementById(`productosImg`);
 const mainTitle = document.getElementById(`mainTitle`)
-
+const breadcrumbLink = document.getElementById(`breadcrumbLink`)
 const showCart = ()=>{
   mostrarCarrito.addEventListener(`click`,()=>{
-
+    
     if(kitsSolicitados.length != 0){
+      breadcrumbLink.style.display = "inline"
       kitContainer.style.display ="none";
       cargandoProductos.style.display ="none";
       productosImg.style.display = "none"

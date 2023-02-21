@@ -16,7 +16,7 @@ carritoCounter.innerHTML = 0
 opcion1.addEventListener(`click`,()=>{
 
     opcion1.classList.add(`desaparecer`);
-
+    addCartBtn.style.top = `700px`
     setTimeout(()=>{
         
     opcion1.style.display = "none"        
@@ -30,6 +30,7 @@ opcion1.addEventListener(`click`,()=>{
 opcion2.addEventListener(`click`,()=>{
     
     opcion2.classList.add(`desaparecer`);
+    addCartBtn.style.top = `450px`
 
     const paso2 = document.getElementById(`paso2`);
     paso2.style.opacity = "1"
@@ -152,6 +153,8 @@ addCartBtn.addEventListener(`click`, ()=>{
         
 
         if(sessionStorage.getItem(`pedidoFrecuencia`) != null | sessionStorage.getItem(`pedidoFrecuencia`) != undefined | sessionStorage.getItem(`pedidoFrecuencia`) != ` `){
+            const breadcrumbLink = document.getElementById(`breadcrumbLink`)
+            breadcrumbLink.style.display = "inline";
             mainContainer.style.display ="none";
             cartSection.style.display ="inline";
             }  
@@ -165,8 +168,9 @@ const vaciarCarritoBtn = document.getElementById(`vaciarCarritoBtn`)
 const productosCarrito =document.getElementById(`productos-carrito`)
 
 vaciarCarritoBtn.addEventListener(`click`,()=>{
-    carritoCounter.innerHTML --
-  productosCarrito.innerHTML = ` `;
+    productosCarrito.innerHTML = ` `;
+    carritoCounter.innerHTML = 0
+  
   
   Swal.fire({
     icon:`success`,

@@ -22,7 +22,7 @@
   margin: auto;
   padding-right: 3%;
   height: 80px;
-  font-size: 21px;
+  font-size: 20px;
 }
 .header .navbar .container-fluid {
   max-width: 1300px;
@@ -199,7 +199,10 @@
   }
 }
 
-.main-container .productos-img {
+.body-no-index .main-container {
+  height: auto;
+}
+.body-no-index .main-container .productos-img {
   width: 100%;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url(../assets/pexels-felicia-evelyn-limena-1568639.jpg) no-repeat center center fixed;
   border-radius: 10px;
@@ -211,12 +214,12 @@
   align-items: center;
 }
 @media screen and (min-width: 600px) {
-  .main-container .productos-img {
+  .body-no-index .main-container .productos-img {
     max-width: 1200px;
   }
 }
 @media screen and (min-width: 700px) {
-  .main-container .productos-img {
+  .body-no-index .main-container .productos-img {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -224,7 +227,7 @@
     text-align: center;
   }
 }
-.main-container .productos-img .img-items {
+.body-no-index .main-container .productos-img .img-items {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -232,7 +235,7 @@
   width: 100%;
 }
 @media screen and (min-width: 700px) {
-  .main-container .productos-img .img-items {
+  .body-no-index .main-container .productos-img .img-items {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -240,7 +243,7 @@
     width: 50%;
   }
 }
-.main-container .productos-img .img-items .h3 {
+.body-no-index .main-container .productos-img .img-items .h3 {
   text-align: center;
   color: #EFEBE9;
   font-size: 45px;
@@ -249,26 +252,26 @@
   position: relative;
   bottom: 50px;
 }
-.main-container .kits-container {
+.body-no-index .main-container .kits-container {
   display: none;
   grid-template-columns: 1fr;
   gap: 25px;
   margin-top: 50px;
 }
 @media screen and (min-width: 600px) {
-  .main-container .kits-container {
+  .body-no-index .main-container .kits-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 10px;
   }
 }
 @media screen and (min-width: 992px) {
-  .main-container .kits-container {
+  .body-no-index .main-container .kits-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
 }
-.main-container .kits-container .kit {
+.body-no-index .main-container .kits-container .kit {
   width: 17em;
   background-color: #EFEBE9;
   border-radius: 10px;
@@ -277,36 +280,36 @@
   align-items: center;
 }
 @media screen and (min-width: 992px) {
-  .main-container .kits-container .kit {
+  .body-no-index .main-container .kits-container .kit {
     width: 19em;
   }
 }
-.main-container .kits-container .kit .card {
+.body-no-index .main-container .kits-container .kit .card {
   width: 100%;
   border-radius: 10px;
 }
-.main-container .kits-container .kit .card:hover {
+.body-no-index .main-container .kits-container .kit .card:hover {
   transform: scale(1.05);
   transition: 0.2s;
   border-color: #ca663b;
 }
-.main-container .kits-container .kit .card .bg-image {
+.body-no-index .main-container .kits-container .kit .card .bg-image {
   width: 100%;
   display: flex;
 }
-.main-container .kits-container .kit .card .bg-image .img-fluid {
+.body-no-index .main-container .kits-container .kit .card .bg-image .img-fluid {
   height: 200px;
   margin: auto;
   margin-bottom: 20px;
   padding-top: 15px;
 }
-.main-container .kits-container .kit .card .card-body {
+.body-no-index .main-container .kits-container .kit .card .card-body {
   width: 100%;
 }
-.main-container .kits-container .kit .card .card-body .card-title {
+.body-no-index .main-container .kits-container .kit .card .card-body .card-title {
   text-align: center;
 }
-.main-container .kits-container .kit .card .card-body .descripciones {
+.body-no-index .main-container .kits-container .kit .card .card-body .descripciones {
   height: auto;
   width: 100%;
   display: flex;
@@ -315,13 +318,13 @@
   align-items: flex-start;
   margin-top: 20px;
 }
-.main-container .kits-container .kit .card .card-body .descripciones .card-price {
+.body-no-index .main-container .kits-container .kit .card .card-body .descripciones .card-price {
   font-size: 22px;
   font-weight: 600;
   color: #ca663b;
   padding-top: 20px;
 }
-.main-container .kits-container .kit .card .card-body .agregarCarritoBtn {
+.body-no-index .main-container .kits-container .kit .card .card-body .agregarCarritoBtn {
   background-color: transparent;
   border: 1px solid #222;
   font-family: "Varela Round", sans-serif;
@@ -336,7 +339,7 @@
   align-self: center;
   cursor: pointer;
 }
-.main-container .kits-container .kit .card .card-body .agregarCarritoBtn:hover {
+.body-no-index .main-container .kits-container .kit .card .card-body .agregarCarritoBtn:hover {
   border: 1px solid #EFEBE9;
   background-color: #ca663b;
   color: #EFEBE9;
@@ -473,7 +476,7 @@
 }
 
 .main-container {
-  height: 100vh;
+  height: auto;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -481,6 +484,7 @@
   align-items: center;
   padding-top: 130px;
   background-color: #fff;
+  position: relative;
 }
 .main-container .ir-al-carrito {
   padding: 10px;
@@ -496,10 +500,11 @@
   transition: 0.5s;
 }
 .main-container .crear-pedido-img {
-  height: 450px;
+  height: 50%;
   width: 100%;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url(../assets/pexels-jason-villanueva-851555.jpg) no-repeat right center;
   border-radius: 10px;
+  text-align: center;
   animation: aparicionCrearPedidoImg 1s 1;
   display: flex;
   flex-direction: column;
@@ -683,22 +688,32 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
+  justify-self: center;
+  margin-bottom: 0;
 }
 .main-container .pedido .opciones-container .centrar-opciones .añadirCarritoBtn {
   background-color: transparent;
   color: #ca663b;
-  position: absolute;
+  align-self: center;
   border-radius: 10px;
   border: 1px solid #ca663b;
   padding: 12px;
-  align-self: center;
-  margin-top: 450px;
+  margin-top: 100px;
 }
 .main-container .pedido .opciones-container .centrar-opciones .añadirCarritoBtn:hover {
   transform: scale(1.1);
   background-color: #ca663b;
   color: #fff;
+}
+@media screen and (min-width: 600px) {
+  .main-container .pedido .opciones-container .centrar-opciones .añadirCarritoBtn {
+    top: 700px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .main-container .pedido .opciones-container .centrar-opciones .añadirCarritoBtn {
+    top: 450px;
+  }
 }
 @media screen and (min-width: 992px) {
   .main-container .pedido .opciones-container .centrar-opciones {
@@ -708,11 +723,10 @@
 }
 .main-container .pedido .opciones-container .centrar-opciones .opcion {
   display: grid;
-  position: absolute;
   grid-template-columns: 1fr;
   gap: 10px;
   text-decoration: none;
-  top: 90px;
+  padding-top: 50px;
 }
 @media screen and (min-width: 600px) {
   .main-container .pedido .opciones-container .centrar-opciones .opcion {
@@ -782,4 +796,48 @@
   100% {
     opacity: 100%;
   }
+}
+
+.footer-container {
+  height: 40vh;
+  width: 100%;
+  margin-top: 50px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(0, 0, 0));
+  color: #fff;
+}
+@media screen and (min-width: 285px) {
+  .footer-container {
+    margin-top: 20rem;
+  }
+}
+@media screen and (min-width: 770px) {
+  .footer-container {
+    margin-top: 10rem;
+  }
+}
+.footer-container .footer-title {
+  font-size: 35px;
+}
+.footer-container .footer-title span {
+  color: #000;
+}
+.footer-container .redes-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.footer-container .redes-container .red-social img {
+  height: 32px;
+  margin-right: 20px;
+}
+.footer-container .redes-container .red-social img:hover {
+  transform: scale(1.15);
+  transition: 0.5s;
+  cursor: pointer;
 }/*# sourceMappingURL=styles.css.map */

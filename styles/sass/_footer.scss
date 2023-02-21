@@ -1,0 +1,42 @@
+.footer-container{
+    height: 40vh;
+    width: 100%;
+    margin-top: 50px;
+    text-align: center;
+    @include flex(column,space-evenly,center);
+    background:linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 1) );
+    color: #fff;
+
+
+    @media screen and (min-width:285px) {
+        margin-top: 20rem;
+    }
+   @include max-tablet{
+    margin-top: 10rem;
+   }
+
+    .footer-title{
+        font-size: 35px;
+
+        span{
+            color: #000;
+        }
+    }
+
+    .redes-container{
+        @include flex(row,center,center);
+
+        .red-social img{
+            height: 32px;
+            margin-right: 20px;
+
+            &:hover{
+                transform: scale(1.15);
+                transition: .5s;
+                cursor: pointer;
+            }
+        }
+
+    }
+
+}
