@@ -41,7 +41,7 @@
                   </li>
 
                   <li class="nav-item">
-                    <a class="nav-link active "  href="./cart.html"><img src="../assets/carrito-de-compras.png" alt=""> <span id="carritoCounter">0</span> </a>
+                    <button class="nav-link active " id="mostrarCarrito" onclick="showCart()" style="background-color: transparent; border: none;"><img src="../assets/carrito-de-compras.png" alt=""> <span id="carritoCounter">0</span> </button>
                   </li>
                   
               </div>
@@ -72,151 +72,117 @@
           <div class="kits-container" id="kits-container">
 
             
-          <div class="kit" id="kit1">
+          
 
-            <div class="card">
-              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                <img style="border-top-right-radius: 10px;border-top-left-radius: 10px;" src="../assets/coffee-cups.png" class="img-fluid"/>
-                <a href="#!">
-                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                </a>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Kit <span style="color: #ca663b;">Capuccino</span></h5>
-                <div class="descripciones">
-                  <span class="kit-tipo">Capsula</span>
-                  <span class="kit-cafe">Capuccino</span>
-                  <span class="kit-cantidad">250g</span>
-                  <span class="kit-frecuencia">Semanal</span>
-                  <span class="card-price">$1500</span>
-                 </div>
-                 
-                <a href="#!" class="btn  agregarCarritoBtn">Agregar al carrito</a>
-              </div>
-            </div>
           </div>
 
-          <div class="kit" id="kit2">
 
-            <div class="card">
-              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                <img style="border-top-right-radius: 10px;border-top-left-radius: 10px;" src="../assets/coffee-cups.png" class="img-fluid"/>
-                <a href="#!">
-                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                </a>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Kit <span style="color: #ca663b;">Mokaccino</span></h5>
-                <div class="descripciones">
-                  <span class="kit-tipo">Filtro</span>
-                  <span class="kit-cafe">Mokaccino</span>
-                  <span class="kit-cantidad">250g</span>
-                  <span class="kit-frecuencia">Semanal</span>
-                  <span class="card-price">$1500</span>
-                </div>
-                <a href="#!" class="btn  agregarCarritoBtn">Agregar al carrito</a>
-              </div>
-            </div>
+
+          <!-- CARRITO -->
+          <section class="cart-section" id="cart" style="display: none ;min-height: 100vh;width: 100%;">
+
+            <div class="h-100 h-custom w-100"  style="background-color: #EFEBE9;margin-top: 100px;">
+              <div class="container py-5 h-75 w-75">
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                  <div class="col-12" >
+                    <div class="card card-registration card-registration-2"  style="border-radius: 15px;">
+                      <div class="card-body p-0" >
+                        <div class="row g-0" >
+                          <div class="col-lg-8" >
+                            
+                            <div id="cargandoProductos" style="display: none; flex-direction: column ;justify-content: center;align-items: center ;font-size:30px  ;text-align: center;margin-top: 40%;"> <iframe src="https://giphy.com/embed/3oEjI6SIIHBdRxXI40" width="150" height="150" frameBorder="0"  allowFullScreen></iframe></div>
+                                      
+                            
+                            <div  id="resumenPedido" class="p-5" >
+                              
+                              <div class="d-flex justify-content-between align-items-center mb-5">
+                                <h1 class="fw-bold mb-0 text-black">Pedido </h1>
+                                <h6 class="mb-0 text-muted">4 items</h6>
+                              </div>
+      
+                              <hr class="my-4">
+
+                              <div  class="productosCarrito" id="productos-carrito">                               
+                                
+
+                              </div>
             
-          </div>
-
-          <div class="kit" id="kit3">
-
-            <div class="card">
-              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                <img style="border-top-right-radius: 10px;border-top-left-radius: 10px;" src="../assets/coffee-cups.png" class="img-fluid"/>
-                <a href="#!">
-                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                </a>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Kit <span style="color: #ca663b;">Latte Machiatto</span></h5>
-                <div class="descripciones">
-                  <span class="kit-tipo">Espresso</span>
-                  <span class="kit-cafe">Latte Machiatto</span>
-                  <span class="kit-cantidad">250g</span>
-                  <span class="kit-frecuencia">Semanal</span>
-                  <span class="card-price">$1500</span>
-                 </div>
-                <a href="#!" class="btn  agregarCarritoBtn">Agregar al carrito</a>
-              </div>
-            </div>
-        </div>
-
-          <div class="kit" id="kit4">
-
-            <div class="card">
-              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                <img style="border-top-right-radius: 10px;border-top-left-radius: 10px;" src="../assets/coffee-cups.png" class="img-fluid"/>
-                <a href="#!">
-                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                </a>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Kit <span style="color: #ca663b;">Americano</span></h5>
-                <div class="descripciones">
-                  <span class="kit-tipo">Capsula</span>
-                  <span class="kit-cafe">Americano</span>
-                  <span class="kit-cantidad">500g</span>
-                  <span class="kit-frecuencia">Mensual</span>
-                  <span class="card-price">$1500</span>
-                 </div>
-                <a href="#!" class="btn  agregarCarritoBtn">Agregar al carrito</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="kit" id="kit5">
-
-            <div class="card">
-              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                <img style="border-top-right-radius: 10px;border-top-left-radius: 10px;" src="../assets/coffee-cups.png" class="img-fluid"/>
-                <a href="#!">
-                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                </a>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Kit <span style="color: #ca663b;">Rio de Janeiro</span></h5>
-                <div class="descripciones">
-                  <span class="kit-tipo">Filtro</span>
-                  <span class="kit-cafe">Rio de Janeiro</span>
-                  <span class="kit-cantidad">500g</span>
-                  <span class="kit-frecuencia">Mensual</span>
-                  <span class="card-price">$1500</span>
-                 </div>
-                <a href="#!" class="btn  agregarCarritoBtn">Agregar al carrito</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="kit" id="kit6">
-
-            <div class="card">
-              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                <img style="border-top-right-radius: 10px;border-top-left-radius: 10px;" src="../assets/coffee-cups.png" class="img-fluid"/>
-                <a href="#!">
-                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                </a>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Kit <span style="color: #ca663b;">Cacao</span></h5>
-                <div class="descripciones">
-                  <span class="kit-tipo">Espresso</span>
-                  <span class="kit-cafe">Cacao</span>
-                  <span class="kit-cantidad">500g</span>
-                  <span class="kit-frecuencia">Mensual</span>
-                  <span class="card-price">$1500</span>
-                 </div>
-                <a href="#!" class="btn  agregarCarritoBtn">Agregar al carrito</a>
+                              
+            
+                                                     
+                              <div style="display: flex;justify-content: space-between;">
+                                <div class="pt-4">
+                                  <h6 class="mb-1"><a href="./crear-pedido.html"  class="text-body"><i
+                                        class="fas fa-long-arrow-alt-left me-2"></i>Cambiar pedido</a></h6>
+                                </div>
+                                <div class="pt-4">
+                                  <button style="border: none;background-color: transparent;" id="vaciarCarritoBtn"  style="color: #f00;"><img src="../assets/pedidoImagenes/bin.png" alt=""></button>
+                                  
+                                </div>
+                              </div>
+                              
+                            </div>
+                          </div>
+      
+                          
+      
+                          <div class="col-lg-4 bg-light" >
+                            <div class="p-5">
+                              <h3 class="fw-bold mb-5 mt-2 pt-1">Resumen</h3>
+                              <hr class="my-4">
+            
+                              <div class="d-flex justify-content-between mb-4">
+                                <h5 class="text-uppercase">items 3</h5>
+                                
+                              </div>
+            
+                              <h5 class="text-uppercase mb-3">Envío</h5>
+            
+                              <div class="mb-4 pb-2">
+                                <select class="select">
+                                  <option value="500">Delivery Estándar - $500.00</option>
+                                  <option value="1000">Delivery Turbo - $1000</option>
+                                  
+                                </select>
+                              </div>
+            
+                              <h5 class=" mb-3">Código de descuento</h5>
+            
+                              <div class="mb-5">
+                                <div class="form-outline">
+                                  <input type="text" id="form3Examplea2" class="form-control form-control-lg" />
+                                  <label class="form-label" for="form3Examplea2">Ingresá tu código</label>
+                                </div>
+                              </div>
+            
+                              <hr class="my-4">
+            
+                              <div class="d-flex justify-content-between mb-5">
+                                <h5 class="text-uppercase">Precio total</h5>
+                                <h5>$ <span id="precioTotal"></span></h5>
+                              </div>
+            
+                              <a   class="btn btn-light btn-block btn-lg" id="finalizarCompraBtn"
+                                style="background-color:#ca663b; color: #fff; padding: 10px;padding-left: 20px;padding-right: 20px;">Pagar</a>
+                              
+                                
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-        </div>  
 
-          </div>
+          </section>
+          
       </main>
 
-      <script src="../js/kits.js" type="module"></script>
-      <script src="../js/cart.js" type="module"></script>
+      <script src="../js/kits.js"></script>
+      
+      
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
       <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 

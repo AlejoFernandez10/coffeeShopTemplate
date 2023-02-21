@@ -1,4 +1,4 @@
-const opcionesContainer = document.getElementById(`opciones-container`)
+
 
 const opcion1 = document.getElementById(`opcion1`)
 const opcion2 = document.getElementById(`opcion2`)
@@ -89,10 +89,10 @@ const precios = document.querySelectorAll(`.precio`)
 const resumenPedido = [];
 
 
+
 elecciones.forEach(eleccion =>{
 
-    eleccion.addEventListener(`click`, ()=>{
-      
+    eleccion.addEventListener(`click`, ()=>{      
 
         eleccion.style.transition = ".1s"
         eleccion.style.backgroundColor = "#ca663b"
@@ -107,8 +107,12 @@ elecciones.forEach(eleccion =>{
 
 //ENVIO PEDIDO AL SESSION STORAGE
 
+/* const mostrarCarrito = document.getElementById(`mostrarCarrito`) */
+const cartSection = document.getElementById(`cart`)
+const mainContainer = document.getElementById(`main-container`)
 
 addCartBtn.addEventListener(`click`, ()=>{
+
     sessionStorage.setItem(`pedidoGrano`, resumenPedido[0]);
     sessionStorage.setItem(`pedidoCafe`, resumenPedido[1]);
     sessionStorage.setItem(`pedidoCantidad`, resumenPedido[2]);
@@ -117,10 +121,67 @@ addCartBtn.addEventListener(`click`, ()=>{
     Swal.fire({
         icon: 'success',
         title: 'Pedido realizado!',
-        text: 'Su pedido fue agregado al carrito correctamente',
-        confirmButtonText: `<a href="./cart.html" id="añadir-Carrito-Btn" style=" text-decoration:none;background-color:transparent;border:none;color:#fff;">Ir al carrito</a>`
+        text: 'Su pedido lo espera en el carrito',
+        confirmButtonText: `<button id="irAlCarrito"  style=" text-decoration:none;background-color:transparent;border:none;color:#fff;">Ir al carrito</button>`
       })
+
+
+      const irAlCarrito = document.getElementById(`irAlCarrito`)
+
+      irAlCarrito.addEventListener(`click`,()=>{
+
+        const pedidoGrano = sessionStorage.getItem(`pedidoGrano`)
+        const pedidoCafe = sessionStorage.getItem(`pedidoCafe`)
+        const pedidoCantidad = sessionStorage.getItem(`pedidoCantidad`)
+        const pedidoFrecuencia = sessionStorage.getItem(`pedidoFrecuencia`)
+
+        const granoSeleccionado = document.getElementById(`granoSeleccionado`)
+        const cafeSeleccionado = document.getElementById(`cafeSeleccionado`)
+        const cantidadSeleccionada = document.getElementById(`cantidadSeleccionada`)
+        const frecuenciaSeleccionada = document.getElementById(`frecuenciaSeleccionada`)
+ 
+        granoSeleccionado.innerText = pedidoGrano;
+        cafeSeleccionado.innerText = pedidoCafe;
+        cantidadSeleccionada.innerText = pedidoCantidad
+        frecuenciaSeleccionada.innerText = pedidoFrecuencia
+        
+        
+
+        if(sessionStorage.getItem(`pedidoFrecuencia`) != null | sessionStorage.getItem(`pedidoFrecuencia`) != undefined | sessionStorage.getItem(`pedidoFrecuencia`) != ` `){
+            mainContainer.style.display ="none";
+            cartSection.style.display ="inline";
+            }  
+
+      })         
+
+})
+
+
+const vaciarCarritoBtn = document.getElementById(`vaciarCarritoBtn`)
+const productosCarrito =document.getElementById(`productos-carrito`)
+
+vaciarCarritoBtn.addEventListener(`click`,()=>{
+  productosCarrito.innerHTML = ` `;
+  
+  Swal.fire({
+    icon:`success`,
+    title:`Carrito vacío!`,
+    text:`Carrito vaciado correctamente`,
+  })
 })
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+   

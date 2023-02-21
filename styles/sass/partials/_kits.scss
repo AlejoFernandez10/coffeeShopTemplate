@@ -7,13 +7,7 @@
         background-size: cover;
         margin-bottom: 60px;
     
-        animation: aparicionCrearPedidoImg 1s 1;
-    
-            @keyframes aparicionCrearPedidoImg{
-                from{
-                    transform: translateX(800px);
-                }
-            }
+        
         
     
         @include tablet{

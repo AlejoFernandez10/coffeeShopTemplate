@@ -204,16 +204,10 @@
   border-radius: 10px;
   background-size: cover;
   margin-bottom: 60px;
-  animation: aparicionCrearPedidoImg 1s 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-@keyframes aparicionCrearPedidoImg {
-  from {
-    transform: translateX(800px);
-  }
 }
 @media screen and (min-width: 600px) {
   .main-container .productos-img {
