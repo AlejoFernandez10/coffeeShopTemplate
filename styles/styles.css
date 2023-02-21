@@ -22,6 +22,7 @@
   margin: auto;
   padding-right: 3%;
   height: 80px;
+  font-size: 21px;
 }
 .header .navbar .container-fluid {
   max-width: 1300px;
@@ -240,8 +241,9 @@
   }
 }
 .main-container .productos-img .img-items .h3 {
+  text-align: center;
   color: #EFEBE9;
-  font-size: 50px;
+  font-size: 45px;
   padding-top: 150px;
   padding-bottom: 60px;
   position: relative;
@@ -267,12 +269,17 @@
   }
 }
 .main-container .kits-container .kit {
-  width: 20em;
+  width: 17em;
   background-color: #EFEBE9;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media screen and (min-width: 992px) {
+  .main-container .kits-container .kit {
+    width: 19em;
+  }
 }
 .main-container .kits-container .kit .card {
   width: 100%;
@@ -753,21 +760,6 @@
   margin-top: 20px;
   justify-self: flex-end;
   align-self: flex-start;
-}
-.main-container .pedido .opciones-container .centrar-opciones .opcion .capsula {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url("../../assets/pedidoImagenes/coffee-capsule-1833012_640.jpg") no-repeat center center;
-  background-size: cover;
-  color: #eee;
-}
-.main-container .pedido .opciones-container .centrar-opciones .opcion .filtro {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url("../../assets/pedidoImagenes/coffee-924948_640.jpg") no-repeat center center;
-  background-size: cover;
-  color: #eee;
-}
-.main-container .pedido .opciones-container .centrar-opciones .opcion .espresso {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6)), url("../../assets/pedidoImagenes/beverage-1869598_640.jpg") no-repeat center center;
-  background-size: cover;
-  color: #eee;
 }
 .main-container .pedido .opciones-container .centrar-opciones .desaparecer {
   animation: desaparecer 0.4s 1;

@@ -43,7 +43,7 @@
                 <a class="nav-link active" href="./nuestros-productos.html">Kits</a>
               </li>
               <li class="nav-item">
-                <button class="nav-link active " id="mostrarCarrito" onclick="showCart()" style="background-color: transparent; border: none;"><img src="../assets/carrito-de-compras.png" alt=""> <span id="carritoCounter">0</span> </button>
+                <button class="nav-link active " id="mostrarCarrito" onclick="showCart()" style="background-color: transparent; border: none;"><img src="../assets/carrito-de-compras.png" alt=""> <span id="carritoCounter"></span> </button>
               </li>
           </div>
         </div>
@@ -248,7 +248,7 @@
                         
                         <div class="d-flex justify-content-between align-items-center mb-5">
                           <h1 class="fw-bold mb-0 text-black">Pedido </h1>
-                          <h6 class="mb-0 text-muted">4 items</h6>
+                          <h6 class="mb-0 text-muted">items</h6>
                         </div>
 
                         <hr class="my-4">
@@ -315,7 +315,7 @@
                         <hr class="my-4">
       
                         <div class="d-flex justify-content-between mb-4">
-                          <h5 class="text-uppercase">items 3</h5>
+                          <h5 class="text-uppercase"></h5>
                           
                         </div>
       
@@ -341,8 +341,8 @@
                         <hr class="my-4">
       
                         <div class="d-flex justify-content-between mb-5">
-                          <h5 class="text-uppercase">Precio total</h5>
-                          <h5>$ <span id="precioTotal"></span></h5>
+                          <h5 class="text-uppercase" id="precioTotal">Precio total</h5>
+                          <h5>$ <span id="precioTotal">1500</span></h5>
                         </div>
       
                         <a   class="btn btn-light btn-block btn-lg" id="finalizarCompraBtn"

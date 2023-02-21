@@ -31,8 +31,9 @@
                 width: 50%;
             }
             .h3{
+                text-align: center;
                 color: $colorPrincipal-50;
-                font-size: 50px;
+                font-size: 45px;
                 padding-top: 150px;
                 padding-bottom: 60px;
                 position: relative;
@@ -62,13 +63,16 @@
         margin-top: 50px;
 
         .kit{            
-            width: 20em;
+            width: 17em;
             background-color: $colorPrincipal-50;
             border-radius: 10px;
             display: flex;
             flex-direction: column;
             align-items: center;
 
+            @include desktop{
+                width: 19em;
+            }
 
             .card{
                 width: 100%;

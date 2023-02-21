@@ -10,7 +10,8 @@ opcion2.style.display= "none"
 opcion3.style.display= "none"
 opcion4.style.display= "none"
 
-
+let carritoCounter = document.getElementById(`carritoCounter`)
+carritoCounter.innerHTML = 0
 
 opcion1.addEventListener(`click`,()=>{
 
@@ -65,12 +66,15 @@ opcion3.addEventListener(`click`,()=>{
 
 opcion4.addEventListener(`click`, ()=>{
 
-    setTimeout(()=>{
+    
 
-
-        opcion4.style.display = "none"        
-           
-        }, 400)
+    Swal.fire({
+        position: 'top-center',
+        icon: 'success',
+        title: 'Pedido terminado!',
+        showConfirmButton: false,
+        timer: 1000
+      })
 })
 
 
@@ -112,7 +116,7 @@ const cartSection = document.getElementById(`cart`)
 const mainContainer = document.getElementById(`main-container`)
 
 addCartBtn.addEventListener(`click`, ()=>{
-
+    carritoCounter.innerHTML ++;
     sessionStorage.setItem(`pedidoGrano`, resumenPedido[0]);
     sessionStorage.setItem(`pedidoCafe`, resumenPedido[1]);
     sessionStorage.setItem(`pedidoCantidad`, resumenPedido[2]);
@@ -121,7 +125,7 @@ addCartBtn.addEventListener(`click`, ()=>{
     Swal.fire({
         icon: 'success',
         title: 'Pedido realizado!',
-        text: 'Su pedido lo espera en el carrito',
+        text: 'Continue al carrito para finalizar su compra',
         confirmButtonText: `<button id="irAlCarrito"  style=" text-decoration:none;background-color:transparent;border:none;color:#fff;">Ir al carrito</button>`
       })
 
@@ -161,6 +165,7 @@ const vaciarCarritoBtn = document.getElementById(`vaciarCarritoBtn`)
 const productosCarrito =document.getElementById(`productos-carrito`)
 
 vaciarCarritoBtn.addEventListener(`click`,()=>{
+    carritoCounter.innerHTML --
   productosCarrito.innerHTML = ` `;
   
   Swal.fire({
@@ -171,7 +176,14 @@ vaciarCarritoBtn.addEventListener(`click`,()=>{
 })
 
 
-
+const finalizarCompra = document.getElementById(`finalizarCompraBtn`)
+finalizarCompra.addEventListener(`click`, ()=>{
+    Swal.fire({
+        icon:`success`,
+        title:`Compra exitosa!`,
+        text:`Disfrute su café`,
+      })
+})
 
 
 

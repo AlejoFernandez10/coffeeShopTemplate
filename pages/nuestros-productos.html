@@ -41,7 +41,7 @@
                   </li>
 
                   <li class="nav-item">
-                    <button class="nav-link active " id="mostrarCarrito" onclick="showCart()" style="background-color: transparent; border: none;"><img src="../assets/carrito-de-compras.png" alt=""> <span id="carritoCounter">0</span> </button>
+                    <button class="nav-link active " id="mostrarCarrito" onclick="showCart()" style="background-color: transparent; border: none;"><img src="../assets/carrito-de-compras.png" alt=""> <span id="carritoCounter"></span> </button>
                   </li>
                   
               </div>
@@ -54,7 +54,7 @@
 
       <main class="main-container">
 
-        <div class="productos-img">
+        <div class="productos-img" id="productosImg">
 
             <div class="img-items">
               <h3 class="h3">Mirá todos nuestros <span style="color:#ca663b ;">kits</span> predeterminados</h3>
@@ -63,7 +63,7 @@
           </div>
 
 
-          <h2 style="font-size: 40px;" > Nuestras opciones</h2>
+          <h2 style="font-size: 40px;" id="mainTitle"> Nuestras opciones</h2>
           
 
 
@@ -97,7 +97,7 @@
                               
                               <div class="d-flex justify-content-between align-items-center mb-5">
                                 <h1 class="fw-bold mb-0 text-black">Pedido </h1>
-                                <h6 class="mb-0 text-muted">4 items</h6>
+                                <h6 class="mb-0 text-muted">items</h6>
                               </div>
       
                               <hr class="my-4">
@@ -132,7 +132,7 @@
                               <hr class="my-4">
             
                               <div class="d-flex justify-content-between mb-4">
-                                <h5 class="text-uppercase">items 3</h5>
+                                <h5 class="text-uppercase">items</h5>
                                 
                               </div>
             
