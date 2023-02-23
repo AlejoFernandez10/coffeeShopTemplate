@@ -73,14 +73,14 @@ opcion4.addEventListener(`click`, ()=>{
         position: 'top-center',
         icon: 'success',
         title: 'Pedido terminado!',
-        showConfirmButton: false,
-        timer: 1000
+        text: 'Solo queda agregarlo al carrito',        
+        confirmButtonText:`Ok!`,
       })
 })
 
 
 
-const addCartBtn = document.getElementById(`añadir-Carrito-Btn`);
+const addCartBtn = document.getElementById(`añadirCarritoBtn`);
 
 
 
@@ -115,6 +115,7 @@ elecciones.forEach(eleccion =>{
 /* const mostrarCarrito = document.getElementById(`mostrarCarrito`) */
 const cartSection = document.getElementById(`cart`)
 const mainContainer = document.getElementById(`main-container`)
+const cartTarget = document.getElementById(`cartTarget`)
 
 addCartBtn.addEventListener(`click`, ()=>{
     carritoCounter.innerHTML ++;
@@ -127,7 +128,7 @@ addCartBtn.addEventListener(`click`, ()=>{
         icon: 'success',
         title: 'Pedido realizado!',
         text: 'Continue al carrito para finalizar su compra',
-        confirmButtonText: `<button id="irAlCarrito"  style=" text-decoration:none;background-color:transparent;border:none;color:#fff;">Ir al carrito</button>`
+        confirmButtonText: `<a href="#cartTarget" id="irAlCarrito"  style=" text-decoration:none;background-color:transparent;border:none;color:#fff;">Ir al carrito</a>`
       })
 
 
@@ -162,6 +163,7 @@ addCartBtn.addEventListener(`click`, ()=>{
       })         
 
 })
+
 
 
 const vaciarCarritoBtn = document.getElementById(`vaciarCarritoBtn`)
