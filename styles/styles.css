@@ -34,7 +34,7 @@
   }
 }
 .header .navbar .container-fluid {
-  max-width: 1300px;
+  max-width: 1200px;
 }
 .header .navbar .container-fluid .navbar-brand img {
   height: 80px;
@@ -64,12 +64,12 @@
 .body-inicio .main-inicio {
   min-height: 100vh;
   width: 100%;
-  max-width: 1500px;
+  max-width: 1400px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  /* margin-top: 50px; */
+  padding-right: 2.5%;
 }
 @media screen and (min-width: 992px) {
   .body-inicio .main-inicio {
