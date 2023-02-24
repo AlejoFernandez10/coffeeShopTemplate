@@ -7,7 +7,7 @@
 
     <!-- ESTILOS -->
     <link rel="stylesheet" href="../styles/styles.css">
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 
     <title>Coffee shop - Creá tu pedido</title>
@@ -17,7 +17,7 @@
 
   <header class="header">
     <span id="cartTarget"></span>
-    <nav class="navbar navbar-no-gradient navbar-expand-lg fixed-top">
+    <nav class="navbar navbar-no-gradient navbar-expand-lg  fixed-top">
 
       <div class="container-fluid">
 
@@ -25,27 +25,27 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="offcanvas bg-dark offcanvas-end justify-content-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas    offcanvas-end justify-content-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
           <div class="offcanvas-header">
-            <h5 class="offcanvas-title text-white" id="offcanvasNavbarLabel">Offcanvas</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Coffe <span style="color: #ca663b;">Shop</span> </h5>
+            <button type="button" class="btn-close " data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
           <div class="offcanvas-body ">
-            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <ul class="navbar-nav  justify-content-end flex-grow-1 pe-3">
               <li class="nav-item">
-                <a class="nav-link active " c aria-current="page" href="../index.html">Inicio</a>
+                <a class="nav-link active  " c aria-current="page" href="../index.html">Inicio</a>
               </li>              
               <li class="nav-item">
-                <a class="nav-link active "  href="./contact.html">Contacto</a>
+                <a class="nav-link active  "  href="./contact.html">Contacto</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="./nuestros-productos.html">Kits</a>
+                <a class="nav-link active " href="./nuestros-productos.html">Kits</a>
               </li>
               <li class="nav-item" style="display: none;" id="breadcrumbLink">
-                <a class="nav-link active "  href="./crear-pedido.html">Crear Pedido</a>
+                <a class="nav-link active  "  href="./crear-pedido.html">Crear Pedido</a>
               </li>
               <li class="nav-item">
-                <button class="nav-link active " id="mostrarCarrito" onclick="showCart()" style="background-color: transparent; border: none;"><img src="../assets/carrito-de-compras.png" alt=""> <span id="carritoCounter"></span> </button>
+                <button class="nav-link active  " id="mostrarCarrito"  style="background-color: transparent; border: none;"><img src="../assets/carrito-de-compras.png" alt=""> <span id="carritoCounter"></span> </button>
               </li>
           </div>
         </div>
@@ -55,7 +55,7 @@
   </header>
 
   <main class="main-container" id="main-container">
-    <div class="crear-pedido-img">
+    <div class="crear-pedido-img"  data-aos="fade-right">
 
       <div class="img-items">
         <h3 class="h3">Creá tu <span style="color:#ca663b ;">plan</span> personalizado</h3>
@@ -64,7 +64,7 @@
       </div>      
     </div>
     
-    <div class="comoFunciona">
+    <div class="comoFunciona" data-aos="fade-left">
       
       <div class="paso paso1">
         <span class="numeroDePaso">01</span>
@@ -87,7 +87,7 @@
     <div class="pedido">
     
 
-        <div class="opciones-container" id="opciones">
+        <div class="opciones-container" id="opciones"  data-aos="fade-up">
 
           <div class="pasosEnOpciones">
             <div class="paso-opcion paso1" style="opacity: 1;">
@@ -113,8 +113,8 @@
 
           <!-- OPCIONES PARA EL PEDIDO -->
 
-          <div class="centrar-opciones" id="opciones-container">
-            <h2 style="opacity:.9 ;" id="h2" class="titulos-opciones">Cree su <span style="color:#ca663b; opacity:1; font-weight: bold;">Pedido</span> </h2>
+          <div class="centrar-opciones" id="opciones-container" data-aos="fade-up">
+            <h2  id="h2" class="titulo-opciones">Cree su <span style="color:#ca663b; opacity:1; font-weight: bold;">Pedido</span> </h2>
           
           <div class="opcion " id="opcion1">             
             
@@ -174,17 +174,17 @@
           <!--------  OPCION 3 ---- -->
           <div class="opcion" id="opcion3">
             
-            <a class="eleccion " id="opcion3Cantidad" style="padding-top: 5%;padding-bottom: 5%;" href="#opcion4Frecuencia">
+            <a class="eleccion " id="opcion3Cantidad"  href="#opcion4Frecuencia">
               <h4 class="titulo-eleccion">250g</h4>
               <p class="parrafo-eleccion">250g del café que seleccionaste</p>
               <span class="precio" style="color:#ca663b;font-weight: bold;">$800</span>
             </a>
-            <a class="eleccion " id="opcion3Cantidad" style="padding-top: 5%;padding-bottom: 5%;" href="#opcion4Frecuencia">
+            <a class="eleccion " id="opcion3Cantidad"  href="#opcion4Frecuencia">
               <h4 class="titulo-eleccion">500g</h4>
               <p class="parrafo-eleccion">500g del café que seleccionaste</p>
               <span class="precio" style="color:#ca663b;font-weight: bold;">$800</span>
             </a>
-            <a class="eleccion " id="opcion3Cantidad" style="padding-top: 5%;padding-bottom: 5%;" href="#opcion4Frecuencia">
+            <a class="eleccion " id="opcion3Cantidad"  href="#opcion4Frecuencia">
               <h4 class="titulo-eleccion">1000g</h4>
               <p class="parrafo-eleccion">1000g del café que seleccionaste</p>
               <span class="precio" style="color:#ca663b;font-weight: bold;">$800</span>
@@ -195,19 +195,19 @@
           
           <div class="opcion" id="opcion4">
                      
-            <a class="eleccion cadenciaDelivery"  style="padding-top: 5%;padding-bottom: 5%;" id="opcion4Frecuencia" href="#añadir-Carrito-Btn">
+            <a class="eleccion cadenciaDelivery"   id="opcion4Frecuencia" href="#añadir-Carrito-Btn">
               <h4 class="titulo-eleccion">Por semana</h4>
               <p class="parrafo-eleccion">Recibí tu café en la puerta de tu casa por Semana</p>
               <span class="precio" style="color:#ca663b;font-weight: bold;">$800</span>
             </a>
 
-            <a class="eleccion cadenciaDelivery"  style="padding-top: 5%;padding-bottom: 5%;" id="opcion4Frecuencia" href="#añadir-Carrito-Btn">
+            <a class="eleccion cadenciaDelivery"   id="opcion4Frecuencia" href="#añadir-Carrito-Btn">
               <h4 class="titulo-eleccion">Por mes</h4>
               <p class="parrafo-eleccion">Recibí tu café en la puerta de tu casa por Mes</p>
               <span class="precio" style="color:#ca663b;font-weight: bold;">$800</span>
             </a>
 
-            <a class="eleccion cadenciaDelivery"  style="padding-top: 5%;padding-bottom: 5%;" id="opcion4Frecuencia" href="#añadir-Carrito-Btn">
+            <a class="eleccion cadenciaDelivery"   id="opcion4Frecuencia" href="#añadir-Carrito-Btn">
               <h4 class="titulo-eleccion">Por trimestre</h4>
               <p class="parrafo-eleccion">Recibí tu café en la puerta de tu casa por Trimestre</p>
               <span class="precio" style="color:#ca663b;font-weight: bold;">$800</span>
@@ -231,11 +231,11 @@
     
   </main>
     <!-- CARRITO -->
-    <section class="cart-section" id="cart" style="background-color: #EFEBE9;margin-top: 100px;display:none;height: 100%;width: 100%;margin-top: 1000px;">
+    <section class="cart-section" id="cart" style="display: none ;min-height: 100vh;width: 100%;">
 
       <div class="h-100 h-custom w-100"  style="background-color: #EFEBE9;margin-top: 100px;">
-        <div class="container py-5 h-75 w-75">
-          <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="container py-5 h-100 w-100">
+          <div class="row d-flex justify-content-center align-items-start h-100">
             <div class="col-12" >
               <div class="card card-registration card-registration-2"  style="border-radius: 15px;">
                 <div class="card-body p-0" >
@@ -254,43 +254,11 @@
 
                         <hr class="my-4">
 
-                        <div  class="productosCarrito" id="productos-carrito">                               
+                        <div  class="productosCarrito" id="productos-carrito" >                               
                           
-                        <div  class="productoEleccion row mb-4 d-flex justify-content-between align-items-center" >
 
-                          <div class="col-md-2 col-lg-3 col-xl-2">
-                            <img
-                              src="../assets/pedidoImagenes/beverage-1869598_640.jpg"
-                              class="img-fluid rounded-2 h-100" alt="#">
-                          </div>
-                          <div class="col-md-3 col-lg-3 col-xl-3">
-                            <h6 class="text-muted" id="granoSeleccionado"></h6>
-                            <p class="text-black mb-1" ><span id="cafeSeleccionado"> </span>,<span id="cantidadSeleccionada"></span>,<span id="frecuenciaSeleccionada"></span></p>
-                            
-                          </div>
-                          <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
-                            <button class="btn btn-link px-2"
-                              onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
-                              <i class="fas fa-minus"></i>
-                            </button>
-      
-                            <input id="form1" min="1" max="3" name="quantity" value="1" type="number"
-                              class="form-control form-control-sm" />
-      
-                            <button class="btn btn-link px-2"
-                              onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                              <i class="fas fa-plus"></i>
-                            </button>
-                          </div>
-                          <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
-                            <h6 class="mb-0">$ 1500</h6>
-                          </div>
-                          <div class="col-md-1 col-lg-1 col-xl-1 text-end">
-                            <a href="#!" class="text-muted"><i class="fas fa-times"></i></a>
-                          </div>
                         </div>
-                       
-                        </div> 
+      
                         
       
                                                
@@ -316,7 +284,7 @@
                         <hr class="my-4">
       
                         <div class="d-flex justify-content-between mb-4">
-                          <h5 class="text-uppercase"></h5>
+                          <h5 class="text-uppercase">items</h5>
                           
                         </div>
       
@@ -342,8 +310,8 @@
                         <hr class="my-4">
       
                         <div class="d-flex justify-content-between mb-5">
-                          <h5 class="text-uppercase" id="precioTotal">Precio total</h5>
-                          <h5>$ <span id="precioTotal">1500</span></h5>
+                          <h5 class="text-uppercase">Precio total</h5>
+                          <h5>$ <span id="precioTotal">$1500.00</span></h5>
                         </div>
       
                         <a   class="btn btn-light btn-block btn-lg" id="finalizarCompraBtn"
@@ -376,17 +344,23 @@
         </div>
         
         <p>Copyright @2023 </p>
-        <p style="background-color: #111; text-align:center; color: aliceblue;">Developed by <a href="https://www.linkedin.com/in/alejo-fernandez-23821b243/" style="text-decoration:none; color: rgb(95 181 222);">Alejo Fernandez</a></p>
+
+        <p style="background-color: #111; text-align:center; color: aliceblue;">Developed by <a href="https://www.linkedin.com/in/alejo-fernandez-23821b243/" style="text-decoration:none; color: rgb(95 181 222);align-self: flex-end;">Alejo Fernandez</a></p>
+        
       </footer>
       
       
 
 
       <script src="../js/crearPedido.js" ></script>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script>
+        AOS.init();
+      </script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
       <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-      
 
+      
       
   </body>
 </html>

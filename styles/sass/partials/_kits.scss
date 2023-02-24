@@ -2,8 +2,13 @@
         
 
     .main-container{
-        height: auto;
-    
+        min-height: 100vh;
+        #mainTitle{
+            font-size: 35px;
+            @include max-tablet{
+                font-size: 42px;
+            }
+        }
         .productos-img{
             
             width:100% ;
@@ -38,16 +43,24 @@
                 .h3{
                     text-align: center;
                     color: $colorPrincipal-50;
-                    font-size: 45px;
+                    font-size: 38px;
                     padding-top: 150px;
                     padding-bottom: 60px;
                     position: relative;
                     bottom: 50px;
                     
+                    @include max-mobile{
+                        font-size: 42px;
+                    }
+                    @include desktop{
+                        font-size: 45px;
+                    }
                 }       
             }
             
         }
+
+        
     
         .kits-container{
     

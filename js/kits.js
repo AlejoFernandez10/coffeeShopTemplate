@@ -89,10 +89,11 @@ kitStock.forEach( kit =>{
         position: 'top-center',
         icon: 'success',
         title: 'Producto agregado!',
-        showConfirmButton: false,
-        timer: 1000
-      })
-      
+        text:`Desea ir al carrito o seguir agregando productos?`,
+        showCancelButton: true,
+        confirmButtonText: `<a href="#cartTarget" id="irAlCarrito"  style=" text-decoration:none;background-color:transparent;border:none;color:#fff;">Ir al carrito</a>`,  
+        cancelButtonText:`<a href="#"   style=" text-decoration:none;background-color:transparent;border:none;color:#fff;">Continuar</a>`,
+      })    
     }else{
       carritoCounter.innerHTML = 4
       Swal.fire({
@@ -101,6 +102,16 @@ kitStock.forEach( kit =>{
         text:`Si quiere seguir agregando productos, elemine algunos ya agregados`,
       })
     }
+    
+    const irAlCarrito = document.getElementById(`irAlCarrito`);
+      irAlCarrito.addEventListener(`click`,()=>{
+        cartSection.style.display ="inline"
+      breadcrumbLink.style.display = "inline"
+      kitContainer.style.display ="none";
+      cargandoProductos.style.display ="none";
+      productosImg.style.display = "none";
+      mainTitle.style.display="none"  ;
+      })
     
   })
 })
@@ -148,11 +159,11 @@ const sumarAlCarrito = ()=>{
   <img style="border-top-right-radius: 10px;border-top-left-radius: 10px;" src="../assets/coffee-cups.png" class="img-fluid"/>
   </div>
   <div class="col-md-3 col-lg-3 col-xl-3">
-    <h6 class="text-muted">Tipo</h6>
-    <h6 class="text-black mb-0" ></h6>
-    <h6 ><span>${prod.tipo}</span> <span >${prod.cafe}</span> <span >${prod.cantidad}</span> <span >${prod.frecuencia}</span></h6>
+    <h6 class="text-muted">${prod.tipo}</h6>
+    <h6 class="text-black mb-3 mt-3" ></h6>
+    <h6 ><span >${prod.cafe}</span> <span >${prod.cantidad}</span> <span >${prod.frecuencia}</span></h6>
   </div>
-  <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
+  <div class="col-md-3 col-lg-3 col-xl-3 d-flex mt-3 " >
     <button class="btn btn-link px-2"
       onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
       <i class="fas fa-minus"></i>
@@ -167,7 +178,7 @@ const sumarAlCarrito = ()=>{
     </button>
   </div>
   <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
-    <h6 class="mb-0">$${prod.precio}</h6>
+    <h6 class="mb-3 mt-3">$${prod.precio}</h6>
   </div>
   <div class="col-md-1 col-lg-1 col-xl-1 text-end">
     <button style="background-color:transparent;border:none;" class="text-muted" style="text-decoration:none;" onclick="eliminarProducto(${prod.Id});">X</button>
@@ -203,22 +214,21 @@ vaciarCarritoBtn.addEventListener(`click`,()=>{
 
 const productosImg = document.getElementById(`productosImg`);
 const mainTitle = document.getElementById(`mainTitle`)
-const breadcrumbLink = document.getElementById(`breadcrumbLink`)
-const showCart = ()=>{
-  mostrarCarrito.addEventListener(`click`,()=>{
-    
-    if(kitsSolicitados.length != 0){
+const breadcrumbLink = document.getElementById(`breadcrumbLink`);
+
+
+  mostrarCarrito.addEventListener(`click`,()=>{    
+      cartSection.style.display ="inline"
       breadcrumbLink.style.display = "inline"
       kitContainer.style.display ="none";
       cargandoProductos.style.display ="none";
       productosImg.style.display = "none"
-      mainTitle.style.display="none"
-      cartSection.style.display ="inline"
-    }
+      mainTitle.style.display="none"    
+    
     
     
   })
-}
+
 
 
 const finalizarCompra = document.getElementById(`finalizarCompraBtn`)

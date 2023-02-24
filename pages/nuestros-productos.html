@@ -12,6 +12,7 @@
     <title>Document</title>
 </head>
 <body class="body-no-index" style="position: relative;height: 100%;">
+  <span id="cartTarget"></span>
     <header class="header">
 
         <nav class="navbar navbar-no-gradient navbar-expand-lg fixed-top">
@@ -22,9 +23,9 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="offcanvas bg-dark offcanvas-end justify-content-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas  offcanvas-end justify-content-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
               <div class="offcanvas-header">
-                <h5 class="offcanvas-title text-white" id="offcanvasNavbarLabel">Offcanvas</h5>
+                <h5 class="offcanvas-title " id="offcanvasNavbarLabel">Offcanvas</h5>
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
               </div>
               <div class="offcanvas-body ">
@@ -44,7 +45,7 @@
                   </li>
 
                   <li class="nav-item">
-                    <button class="nav-link active " id="mostrarCarrito" onclick="showCart()" style="background-color: transparent; border: none;"><img src="../assets/carrito-de-compras.png" alt=""> <span id="carritoCounter"></span> </button>
+                    <a href="#cartTarget" class="nav-link active " id="mostrarCarrito"  style="background-color: transparent; border: none;"><img src="../assets/carrito-de-compras.png" alt=""> <span id="carritoCounter"></span> </a>
                   </li>
                   
               </div>
@@ -66,7 +67,7 @@
           </div>
 
 
-          <h2 style="font-size: 40px;" id="mainTitle"> Nuestras opciones</h2>
+          <h2  id="mainTitle"> Nuestras opciones</h2>
           
 
 
@@ -84,9 +85,9 @@
           <!-- CARRITO -->
           <section class="cart-section" id="cart" style="display: none ;min-height: 100vh;width: 100%;">
 
-            <div class="h-100 h-custom w-100"  style="background-color: #EFEBE9;margin-top: 100px;">
-              <div class="container py-5 h-75 w-75">
-                <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="h-100 h-custom w-100"  style="background-color: #EFEBE9;">
+              <div class="container py-5 h-75 w-100">
+                <div class="row d-flex justify-content-center align-items-start h-100">
                   <div class="col-12" >
                     <div class="card card-registration card-registration-2"  style="border-radius: 15px;">
                       <div class="card-body p-0" >
@@ -196,14 +197,17 @@
         </div>
         
         <p>Copyright @2023 </p>
+
+        <p style="background-color: #111; text-align:center; color: aliceblue;">Developed by <a href="https://www.linkedin.com/in/alejo-fernandez-23821b243/" style="text-decoration:none; color: rgb(95 181 222);align-self: flex-end;">Alejo Fernandez</a></p>
+        
       </footer>
       
-      <p style="background-color: #111; text-align:center; color: aliceblue;">Developed by <a href="https://www.linkedin.com/in/alejo-fernandez-23821b243/" style="text-decoration:none; color: rgb(95 181 222);">Alejo Fernandez</a></p>
+      
 
       <script src="../js/kits.js"></script>   
       
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
       <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
+      
 </body>
 </html>

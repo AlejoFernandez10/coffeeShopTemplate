@@ -5,11 +5,41 @@
     .navbar{
         width: 100%;
         margin: auto;
-        padding-right: 3%;
+        
         height: 80px;
         font-size: 20px;
+
+        @include tablet{
+            width: 90%;
+            
+        }
+
+        @include desktop{
+            width: 100%;
+            
+        }
         .container-fluid{
             max-width: 1300px;
+
+            .navbar-brand{
+                
+                img{
+                    height: 80px;
+                }
+            }
+
+            .offcanvas{
+                .offcanvas-body{
+                    .navbar-nav{
+                        margin-right: 9%;
+
+                        @media screen and (min-width:1350px) {
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+            
         }
     }
 }

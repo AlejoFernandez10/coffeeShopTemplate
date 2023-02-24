@@ -1,9 +1,9 @@
 .contacto-main-container{
     
-    width: 100%;
+    width: 90%;
     @include flex(column, center, center);
     margin-top: 70px;
-
+    margin: auto;
 
 
     .donde-encontrarnos{
@@ -26,7 +26,12 @@
 
     .contacto-center-div{
 
-        .form-img-div{@include flex(row, center, center);}
+        .form-img-div{@include flex(column, center, center);
+
+            @include max-tablet{
+                @include flex(row, center, center);
+            }
+        }
 
         max-width: 1200px;
         @include flex(column, center, center);
@@ -35,7 +40,7 @@
         
 
         .contacto-image{
-            width: 50%;
+            width: 100%;
             display: flex;
             justify-content: center;
     
@@ -46,13 +51,9 @@
                 margin-top: 50px;
                 margin-left: 10px;
 
-                animation: aparicionImgContacto 1s 1;
+                
             }
-            @keyframes aparicionImgContacto{
-                from{
-                    transform: translateX(-1000px);
-                }
-            }
+            
         }
 
 
@@ -62,18 +63,13 @@
             height: 40em;
         
             @include flex(column, center, center);
+            
             text-align: center;
-            width: 50%;
+            width: 100%;
             border-radius: 7px;
             border: 1px solid #000;
         
-            animation: aparicionContactoForm 1s 1;
-    
-            @keyframes aparicionContactoForm{
-                from{
-                    transform: translateX(800px);
-                }
-            }
+            
             h2{
                 font-size: 29px;
                 margin-top: 50px;
