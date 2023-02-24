@@ -51,7 +51,7 @@ kitStock.forEach( kit =>{
   <div class="kit" >
 
   <div class="card">
-    <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+    <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light" data-aos="fade-up">
       <img style="border-top-right-radius: 10px;border-top-left-radius: 10px;" src="../assets/coffee-cups.png" class="img-fluid"/>
       <a href="#!">
         <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
@@ -92,7 +92,7 @@ kitStock.forEach( kit =>{
         text:`Desea ir al carrito o seguir agregando productos?`,
         showCancelButton: true,
         confirmButtonText: `<a href="#cartTarget" id="irAlCarrito"  style=" text-decoration:none;background-color:transparent;border:none;color:#fff;">Ir al carrito</a>`,  
-        cancelButtonText:`<a href="#"   style=" text-decoration:none;background-color:transparent;border:none;color:#fff;">Continuar</a>`,
+        cancelButtonText:`<a    style=" text-decoration:none;background-color:transparent;border:none;color:#fff;">Continuar</a>`,
       })    
     }else{
       carritoCounter.innerHTML = 4
