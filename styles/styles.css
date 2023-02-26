@@ -15,18 +15,15 @@
 }
 
 .header {
+  height: auto;
   width: 100%;
+  background-color: #fff;
 }
 .header .navbar {
   width: 100%;
   margin: auto;
   height: 80px;
   font-size: 20px;
-}
-@media screen and (min-width: 600px) {
-  .header .navbar {
-    width: 90%;
-  }
 }
 @media screen and (min-width: 992px) {
   .header .navbar {

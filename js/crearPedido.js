@@ -65,18 +65,7 @@ opcion3.addEventListener(`click`,()=>{
     }, 400)
 })
 
-opcion4.addEventListener(`click`, ()=>{
 
-    
-
-    Swal.fire({
-        position: 'top-center',
-        icon: 'success',
-        title: 'Pedido terminado!',
-        text: 'Solo queda agregarlo al carrito',        
-        confirmButtonText:`Ok!`,
-      })
-})
 
 
 
@@ -110,41 +99,6 @@ elecciones.forEach(eleccion =>{
 
 
 
-/* const div = document.createElement(`div`);
-
-  div.innerHTML = `
-  <div style="display: none;" class="productoEleccion row mb-4 d-flex justify-content-between align-items-center" >
-  <div class="col-md-2 col-lg-2 col-xl-2">
-  <img style="border-top-right-radius: 10px;border-top-left-radius: 10px;" src="../assets/coffee-cups.png" class="img-fluid"/>
-  </div>
-  <div class="col-md-3 col-lg-3 col-xl-3">
-    <h6 class="text-muted">Tipo</h6>
-    <h6 class="text-black mb-3 mt-3" ></h6>
-    <h6 ><span>${prod.tipo}</span> <span >${prod.cafe}</span> <span >${prod.cantidad}</span> <span >${prod.frecuencia}</span></h6>
-  </div>
-  <div class="col-md-3 col-lg-3 col-xl-3 d-flex mt-3 " >
-    <button class="btn btn-link px-2"
-      onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
-      <i class="fas fa-minus"></i>
-    </button>
-
-    <input id="form1" min="1" max="3" name="quantity" value="1" type="number"
-      class="form-control form-control-sm" />
-
-    <button class="btn btn-link px-2"
-      onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-      <i class="fas fa-plus"></i>
-    </button>
-  </div>
-  <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
-    <h6 class="mb-3 mt-3">$${prod.precio}</h6>
-  </div>
-  <div class="col-md-1 col-lg-1 col-xl-1 text-end">
-    <button style="background-color:transparent;border:none;" class="text-muted" style="text-decoration:none;" onclick="eliminarProducto(${prod.Id});">X</button>
-  </div>
-</div>
-
-<hr class="my-4"> ` */
 
 
 
