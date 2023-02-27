@@ -36,6 +36,11 @@
 .header .navbar .container-fluid .navbar-brand img {
   height: 80px;
 }
+@media screen and (min-width: 992px) {
+  .header .navbar .container-fluid .offcanvas .offcanvas-body .navbar-nav {
+    margin-right: 9%;
+  }
+}
 @media screen and (min-width: 1350px) {
   .header .navbar .container-fluid .offcanvas .offcanvas-body .navbar-nav {
     margin-right: 0;
@@ -102,7 +107,7 @@
 }
 @media screen and (min-width: 992px) {
   .body-inicio .main-inicio .main__text-button-container .main__title {
-    font-size: 75px;
+    font-size: 80px;
   }
 }
 .body-inicio .main-inicio .main__text-button-container .main__texto-principal {
@@ -121,6 +126,11 @@
 @media screen and (min-width: 500px) {
   .body-inicio .main-inicio .main__text-button-container .main__texto-principal {
     font-size: 17px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .body-inicio .main-inicio .main__text-button-container .main__texto-principal {
+    font-size: 19px;
   }
 }
 .body-inicio .main-inicio .main__text-button-container .botones-inicio {
@@ -180,7 +190,7 @@
 }
 @media screen and (min-width: 992px) {
   .body-inicio .main-inicio .main__text-button-container .botones-inicio .main__button {
-    font-size: 19px;
+    font-size: 21px;
   }
 }
 .body-inicio .main-inicio .main__text-button-container .botones-inicio .main__button-contacto {
@@ -221,7 +231,7 @@
 }
 @media screen and (min-width: 992px) {
   .body-inicio .main-inicio .main__text-button-container .botones-inicio .main__button-contacto {
-    font-size: 19px;
+    font-size: 20px;
   }
 }
 

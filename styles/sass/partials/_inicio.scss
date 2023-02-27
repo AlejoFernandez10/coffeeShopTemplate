@@ -48,8 +48,9 @@
                     font-size: 65px;
                 }
                 @include desktop{
-                    font-size: 75px;
+                    font-size: 80px;
                 }
+
             }
 
             .main__texto-principal{
@@ -66,6 +67,9 @@
 
                 @include max-mobile{
                     font-size: 17px;
+                }
+                @include desktop{
+                    font-size: 19px;
                 }
             }
             
@@ -108,7 +112,7 @@
                         margin-right: 20px;
                     }
                     @include desktop{
-                        font-size: 19px;
+                        font-size: 21px;
                     }
 
 
@@ -141,7 +145,7 @@
                         margin-right: 20px;
                     }
                     @include desktop{
-                        font-size: 19px;
+                        font-size: 20px;
                     }
 
                 }

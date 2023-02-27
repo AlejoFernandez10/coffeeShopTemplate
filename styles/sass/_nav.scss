@@ -29,6 +29,10 @@
             .offcanvas{
                 .offcanvas-body{
                     .navbar-nav{
+
+                        @include desktop{
+                            margin-right: 9%;
+                        }
                         
 
                         @media screen and (min-width:1350px) {
