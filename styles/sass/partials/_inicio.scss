@@ -1,6 +1,6 @@
 
 .body-inicio{
-    height: 100vh;
+    min-height: 100vh;
     background: linear-gradient(to bottom, rgba(0, 0, 0, .4), rgba(0, 0, 0, .7) ), url(.././assets/fondo1.jpg) center no-repeat fixed ;
     background-size: cover;
 
@@ -107,6 +107,9 @@
                         margin-top: 50px;
                         margin-right: 20px;
                     }
+                    @include desktop{
+                        font-size: 19px;
+                    }
 
 
                     
@@ -136,6 +139,9 @@
                     @include tablet{
                         margin-top: 50px;
                         margin-right: 20px;
+                    }
+                    @include desktop{
+                        font-size: 19px;
                     }
 
                 }

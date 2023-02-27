@@ -36,9 +36,6 @@
 .header .navbar .container-fluid .navbar-brand img {
   height: 80px;
 }
-.header .navbar .container-fluid .offcanvas .offcanvas-body .navbar-nav {
-  margin-right: 9%;
-}
 @media screen and (min-width: 1350px) {
   .header .navbar .container-fluid .offcanvas .offcanvas-body .navbar-nav {
     margin-right: 0;
@@ -46,7 +43,7 @@
 }
 
 .body-inicio {
-  height: 100vh;
+  min-height: 100vh;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url(.././assets/fondo1.jpg) center no-repeat fixed;
   background-size: cover;
 }
@@ -181,6 +178,11 @@
     margin-right: 20px;
   }
 }
+@media screen and (min-width: 992px) {
+  .body-inicio .main-inicio .main__text-button-container .botones-inicio .main__button {
+    font-size: 19px;
+  }
+}
 .body-inicio .main-inicio .main__text-button-container .botones-inicio .main__button-contacto {
   background-color: transparent;
   font-family: "Varela Round", sans-serif;
@@ -215,6 +217,11 @@
   .body-inicio .main-inicio .main__text-button-container .botones-inicio .main__button-contacto {
     margin-top: 50px;
     margin-right: 20px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .body-inicio .main-inicio .main__text-button-container .botones-inicio .main__button-contacto {
+    font-size: 19px;
   }
 }
 
@@ -821,13 +828,13 @@
 }
 
 .footer-container {
-  height: 30vh;
+  min-height: 30vh;
   width: 100%;
   margin-top: 50px;
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(0, 0, 0));
   color: #fff;
